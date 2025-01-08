@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faInfoCircle} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 export default function navbar() {
   return (
@@ -18,19 +19,16 @@ export default function navbar() {
             <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Home</a>
+                        <Link className="nav-link text-dark"to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">BMI</a>
+                        <Link className="nav-link text-dark" to="/BMI">BMI</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Calorie</a>
+                        <Link className="nav-link text-dark"  to="/Calorie">Calorie</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Diet</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Pricing</a>
+                        <Link className="nav-link text-dark"  to="/Diet">Diet</Link>
                     </li>
                 </ul>
             </div>
