@@ -8,6 +8,7 @@ import Calorie from './Calorie';
 import Diet from './Diet';
 import BMI from './BMI';
 import { Route, Routes } from 'react-router-dom';
+import Login from './Login';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='/Calorie' element={<Calorie/>}/>
           <Route path='/Diet' element={<Diet/>}/>
           <Route path='/BMI' element={<BMI/>}/>
+          <Route path='/Login' element={<Login/>}/>
         </Routes>
       <Footer/>
     </div>

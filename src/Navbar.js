@@ -34,8 +34,8 @@ export default function navbar() {
             </div>
             
             <div className="user-icons">
-                <i ><FontAwesomeIcon icon={faUser}/></i>
-                <i ><FontAwesomeIcon icon={faInfoCircle}/></i>
+                <Link to='/Login'><i ><FontAwesomeIcon icon={faUser}/></i></Link>
+                <Link><i ><FontAwesomeIcon icon={faInfoCircle}/></i></Link>
             </div>
         </div>
     </nav>
