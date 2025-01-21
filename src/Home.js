@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import HeroSection from "./HeroSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalculator, faWeight, faUtensils } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,8 +18,18 @@ export default function Home() {
     boxShadow: "0 10px 20px rgba(0, 0, 0, 0.15)",
   };
 
+  const HeroSection = () => {
+    return (
+      <div>
+      <section className="hero-section">
+       <h1 className="hero-text">TOGETHER FOR A<br></br>FITTER FUTURE!</h1>
+   </section>
+   </div>
+    )
+  }
+
   return (
-    <div>
+    <div className="mt-5">
       <HeroSection />
       <section className="py-16 bg-gradient-to-br from-blue-200 via-blue-100 to-green-100">
         <div className="container">
