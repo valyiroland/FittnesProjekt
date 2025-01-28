@@ -1,0 +1,82 @@
+[
+  {
+    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
+    "Method": "GetD",
+    "RelativePath": "Ingredients/Dairy",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
+    "Method": "GetF",
+    "RelativePath": "Ingredients/Fruit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
+    "Method": "GetMF",
+    "RelativePath": "Ingredients/Meats\u0026Fishes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
+    "Method": "GetNL",
+    "RelativePath": "Ingredients/Nuts\u0026Legumes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
+    "Method": "GetO",
+    "RelativePath": "Ingredients/Others",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
+    "Method": "GetP",
+    "RelativePath": "Ingredients/Pasta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
+    "Method": "GetV",
+    "RelativePath": "Ingredients/Vegetables",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.RecipesController",
+    "Method": "GetR",
+    "RelativePath": "Recipes/Recipes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

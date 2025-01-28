@@ -1,0 +1,192 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\tanulo\\source\\repos\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\ingredientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\ingredientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\tanulo\\source\\repos\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\tanulo\\source\\repos\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\tanulo\\source\\repos\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\tanulo\\source\\repos\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\tanulo\\source\\repos\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectcalory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectcalory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\tanulo\\source\\repos\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectbmi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectbmi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\tanulo\\source\\repos\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RecipesController.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\RecipesController.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\RecipesController.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\RecipesController.cs",
+              "RelativeToolTip": "FitprojectAPI\\Controllers\\RecipesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T11:07:10.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IngredientsController.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\IngredientsController.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\IngredientsController.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\IngredientsController.cs",
+              "RelativeToolTip": "FitprojectAPI\\Controllers\\IngredientsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T10:10:56.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FitprojectIngredient.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectIngredient.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectIngredient.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectIngredient.cs",
+              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectIngredient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T10:08:46.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FitprojectContext.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectContext.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectContext.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectContext.cs",
+              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T10:06:29.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FitprojectCategory.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectCategory.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectCategory.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectCategory.cs",
+              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T10:08:32.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FitprojectCalory.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectCalory.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectCalory.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectCalory.cs",
+              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectCalory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T10:08:19.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FitprojectBmi.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectBmi.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectBmi.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectBmi.cs",
+              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectBmi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T10:06:50.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Program.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\source\\repos\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Program.cs",
+              "RelativeToolTip": "FitprojectAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T09:59:17.471Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
