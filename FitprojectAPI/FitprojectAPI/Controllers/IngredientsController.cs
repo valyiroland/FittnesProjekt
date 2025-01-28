@@ -39,7 +39,6 @@ namespace FitprojectAPI.Controllers
                 }
                 catch (Exception ex)
                 {
-
                     return BadRequest(ex.Message);
                 }
             }
@@ -75,7 +74,6 @@ namespace FitprojectAPI.Controllers
                 }
                 catch (Exception ex)
                 {
-
                     return BadRequest(ex.Message);
                 }
             }
@@ -111,7 +109,6 @@ namespace FitprojectAPI.Controllers
                 }
                 catch (Exception ex)
                 {
-
                     return BadRequest(ex.Message);
                 }
             }
@@ -129,7 +126,6 @@ namespace FitprojectAPI.Controllers
                 }
                 catch (Exception ex)
                 {
-
                     return BadRequest(ex.Message);
                 }
             }
