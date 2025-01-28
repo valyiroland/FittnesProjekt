@@ -27,7 +27,9 @@ export default function BMI() {
   };
 
   return (
+    
     <main>
+      
         <h1 className='mainStyle'>BMI Calculator</h1>
         <div className="form-container">
           <label>

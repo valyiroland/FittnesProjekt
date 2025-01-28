@@ -29,7 +29,9 @@ export default function Home() {
   }
 
   return (
+
     <div className="mt-5">
+      
       <HeroSection />
       <section className="py-16 bg-gradient-to-br from-blue-200 via-blue-100 to-green-100">
         <div className="container">
