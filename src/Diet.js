@@ -4,8 +4,8 @@ import axios from 'axios';
 export default function Diet() {
   const [selectedCategory, setSelectedCategory] = useState("Vegetables");
   const [foods, setFoods] = useState([]);
+  const [recipes, setRecipes] = useState([]);
 
- 
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -19,9 +19,14 @@ export default function Diet() {
           "Others": 7,
         };
 
-        
+        // Hozzávalók lekérése
         const foodResponse = await axios.get(`http://localhost:5071/Ingredients/category/${categoryIdMap[selectedCategory]}`);
         setFoods(foodResponse.data);
+
+        // Receptek lekérése
+        const recipeResponse = await axios.get('http://localhost:5071/Recipes/Recipes');
+        setRecipes(recipeResponse.data);
+
       } catch (error) {
         console.error("Error fetching data", error);
       }
@@ -49,21 +54,18 @@ export default function Diet() {
       </div>
 
       <div className="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mb-5">
-        {foods && foods.map((food) => (
-          <div key={food.id} className="col">
-            <div className="card h-100 border-dark">
-              <div className="card-body">
-                <h5 className="card-title">{food.name}</h5>
-                <p className="card-text">{food.calories} kcal/100g</p>
-                <p className="card-text text-muted">{food.description}</p>
-              </div>
-            </div>
-          </div>
-        ))}
+      {foods && foods.map((food, index) => (
+  <div key={food.id || index} className="col">
+    <div className="card h-100 border-dark">
+      <div className="card-body">
+        <h5 className="card-title">{food.name}</h5>
+        <p className="card-text">{food.calPer100g} kcal/100g</p>
+        <p className="card-text text-muted">{food.description}</p>
       </div>
-
-      {/* A receptes rész ideiglenesen ki van hagyva */}
-      {/* 
+    </div>
+  </div>
+))}
+      </div>
       <h2 className="font-weight-bold mb-4">Recipes</h2>
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {recipes && recipes.map((recipe, index) => (
@@ -71,7 +73,7 @@ export default function Diet() {
             <div className="card h-100 border-dark">
               <div className="card-body">
                 <h5 className="card-title">{recipe.name}</h5>
-                <p className="card-text">{recipe.calories} kcal/serving</p>
+                <p className="card-text">{recipe.calPer100g} kcal/serving</p>
                 <p className="card-text">{recipe.description}</p>
                 <div>
                   <p className="font-weight-bold mb-2">Ingredients:</p>
@@ -86,7 +88,6 @@ export default function Diet() {
           </div>
         ))}
       </div>
-      */}
     </div>
   );
 }
