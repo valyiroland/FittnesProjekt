@@ -16,7 +16,7 @@ namespace FitprojectAPI.Controllers
             {
                 try
                 {
-                    var recipes = context.FitprojectRecipes.Select(x => x.Name).ToList();
+                    var recipes = context.FitprojectRecipes.Select(x => new { x.Name, x.Description}).ToList();
                     return Ok(recipes);
                 }
                 catch (Exception ex)
