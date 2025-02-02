@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace FitprojectAPI.Models;
 
@@ -24,7 +23,7 @@ public partial class FitprojectUser
 
     public DateTime? RegisztracioDatum { get; set; }
     [JsonIgnore]
-    public virtual ICollection<FitprojectBmi> ?FitprojectBmis { get; set; } = new List<FitprojectBmi>();
+    public virtual ICollection<FitprojectBmi> FitprojectBmis { get; set; } = new List<FitprojectBmi>();
     [JsonIgnore]
-    public virtual ICollection<FitprojectCalory> ?FitprojectCalories { get; set; } = new List<FitprojectCalory>();
+    public virtual ICollection<FitprojectCalory> FitprojectCalories { get; set; } = new List<FitprojectCalory>();
 }

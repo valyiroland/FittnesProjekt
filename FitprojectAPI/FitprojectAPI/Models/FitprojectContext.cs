@@ -134,6 +134,10 @@ public partial class FitprojectContext : DbContext
                 .HasDefaultValueSql("'NULL'")
                 .HasColumnType("text")
                 .HasColumnName("description");
+            entity.Property(e => e.ImageUrl)
+                .HasMaxLength(255)
+                .HasDefaultValueSql("'NULL'")
+                .HasColumnName("imageUrl");
             entity.Property(e => e.Name)
                 .HasMaxLength(255)
                 .HasColumnName("name");

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace FitprojectAPI.Models;
 
@@ -16,7 +15,9 @@ public partial class FitprojectIngredient
 
     public string? Description { get; set; }
 
-    public virtual FitprojectCategory Category { get; set; } = null!;
+    public string? ImageUrl { get; set; }
+
+    public virtual FitprojectCategory? Category { get; set; } = null!;
     [JsonIgnore]
-    public virtual ICollection<FitprojectRecipeIngredient> ?FitprojectRecipeIngredients { get; set; } = new List<FitprojectRecipeIngredient>();
+    public virtual ICollection<FitprojectRecipeIngredient> FitprojectRecipeIngredients { get; set; } = new List<FitprojectRecipeIngredient>();
 }

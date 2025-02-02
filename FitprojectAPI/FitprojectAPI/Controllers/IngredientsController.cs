@@ -15,7 +15,7 @@ namespace FitprojectAPI.Controllers
             {
                 try
                 {
-                    var ingredients = context.FitprojectIngredients.Where(x => x.CategoryId == categoryId).Select(x => new {x.Name, x.CalPer100g, x.Description }).ToList();
+                    var ingredients = context.FitprojectIngredients.Where(x => x.CategoryId == categoryId).Select(x => new {x.Name, x.CalPer100g, x.Description, x.ImageUrl }).ToList();
                     return Ok(ingredients);
                 }
                 catch (Exception ex)
