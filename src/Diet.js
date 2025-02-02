@@ -13,7 +13,7 @@ export default function Diet() {
           "Vegetables": 1,
           "Fruits": 2,
           "Meats and fishes": 3,
-          "Pasta": 4,
+          "Pasta and Breads": 4,
           "Nuts and Legumes": 5,
           "Dairy": 6,
           "Others": 7,
@@ -43,9 +43,9 @@ export default function Diet() {
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className="form-select border-dark w-auto"
+          className="form-select border-dark w-auto text-center"
         >
-          {["Vegetables", "Fruits", "Meats and fishes", "Pasta", "Nuts and Legumes", "Dairy", "Others"].map((category) => (
+          {["Vegetables", "Fruits", "Meats and fishes", "Pasta and Breads", "Nuts and Legumes", "Dairy", "Others"].map((category) => (
             <option key={category} value={category}>
               {category}
             </option>
@@ -53,10 +53,11 @@ export default function Diet() {
         </select>
       </div>
 
-      <div className="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mb-5">
+    <div className="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mb-5">
       {foods && foods.map((food, index) => (
   <div key={food.id || index} className="col">
-    <div className="card h-100 border-dark">
+    <div className="card border-dark" style={{width:"250px", height:"420px", borderRadius:"10px"}}>
+    <img className="card-img-top" src={food.imageUrl} alt={food.name}/>
       <div className="card-body">
         <h5 className="card-title">{food.name}</h5>
         <p className="card-text">{food.calPer100g} kcal/100g</p>
@@ -64,6 +65,7 @@ export default function Diet() {
       </div>
     </div>
   </div>
+ 
 ))}
       </div>
       <h2 className="font-weight-bold mb-4">Recipes</h2>
