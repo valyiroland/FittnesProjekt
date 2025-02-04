@@ -1,0 +1,11 @@
+#Card{
+    height: 400px;
+}
+.card-img-top{
+    height: 200PX;
+    width: 300;
+}
+#navbarlogo{
+    width: 50px;
+    height: auto;
+}

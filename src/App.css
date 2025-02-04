@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+html{
+  scrollbar-gutter: stable;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -41,10 +45,10 @@
 main {
   text-align: center;
   padding: 20px;
-  flex-grow: 1; /* Kitölti a rendelkezésre álló helyet */
+  flex-grow: 1; 
 }
 
-/* Formázások */
+
 .form-container {
   background: #ffffff;
   border-radius: 10px;
@@ -124,5 +128,8 @@ button {
 }
 
 .mainStyle {
+  margin-top: 5%;
+}
+.footer{
   margin-top: 5%;
 }

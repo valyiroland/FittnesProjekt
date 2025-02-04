@@ -7,12 +7,39 @@ import Home from './Home';
 import Calorie from './Calorie';
 import Diet from './Diet';
 import BMI from './BMI';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './Login';
 import Registration from './Registration';
+import { useEffect } from 'react';
 
 
 function App() {
+  const location = useLocation();
+  let activepage = "";
+  switch (location.pathname) {
+    case "/Diet":
+      
+  activepage = "Diet"
+      break;
+
+    case "/BMI":
+      activepage = "BMI"
+    
+      break;
+      case "/Calorie":
+        activepage = "Calorie"
+        break;
+      default:
+        activepage="Home"
+        break;
+      
+  }
+  useEffect(() => {
+    document.title=`${activepage} | FitForm`
+  
+    }
+  , [activepage])
+  
   return (
     <div className="App">
       <Navbar/>

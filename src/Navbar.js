@@ -8,9 +8,8 @@ export default function navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
-            <a className="navbar-brand" href="#">
-               
-            </a>
+            <Link className="navbar-brand" to="/">
+            <img id='navbarlogo' src="navbarlogo.png"/></Link>
             
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span className="navbar-toggler-icon"></span>

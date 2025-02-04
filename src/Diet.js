@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import './Diet.css';
 export default function Diet() {
   const [selectedCategory, setSelectedCategory] = useState("Vegetables");
   const [foods, setFoods] = useState([]);
@@ -56,7 +56,7 @@ export default function Diet() {
     <div className="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mb-5">
       {foods && foods.map((food, index) => (
   <div key={food.id || index} className="col">
-    <div className="card border-dark" style={{width:"250px", height:"420px", borderRadius:"10px"}}>
+    <div id='Card' className="card border-dark">
     <img className="card-img-top" src={food.imageUrl} alt={food.name}/>
       <div className="card-body">
         <h5 className="card-title">{food.name}</h5>
@@ -69,7 +69,7 @@ export default function Diet() {
 ))}
       </div>
       <h2 className="font-weight-bold mb-4">Recipes</h2>
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
         {recipes && recipes.map((recipe, index) => (
           <div key={recipe.id || index} className="col">
             <div className="card h-100 border-dark">
