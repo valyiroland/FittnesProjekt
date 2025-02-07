@@ -1,40 +1,40 @@
-import { useState } from "react"
+import { useState } from "react";
 import './Calorie.css';
 
 export default function Calorie() {
-  const [weight, setWeight] = useState("")
-  const [height, setHeight] = useState("")
-  const [age, setAge] = useState("")
-  const [gender, setGender] = useState("male")
-  const [activityLevel, setActivityLevel] = useState(1.55)
-  const [weightLossGoal, setWeightLossGoal] = useState(0.5)
+  const [weight, setWeight] = useState("");
+  const [height, setHeight] = useState("");
+  const [age, setAge] = useState("");
+  const [gender, setGender] = useState("male");
+  const [activityLevel, setActivityLevel] = useState(1.55);
+  const [weightLossGoal, setWeightLossGoal] = useState(0.5);
   const [calories, setCalories] = useState({
     maintenance: "",
     weightLoss: "",
     bulk: "",
     bmr: "",
-  })
+  });
 
   const calculateBMR = () => {
     if (gender === "male") {
-      return 88.36 + 13.4 * Number(weight) + 4.8 * Number(height) - 5.7 * Number(age)
+      return 88.36 + 13.4 * Number(weight) + 4.8 * Number(height) - 5.7 * Number(age);
     } else {
-      return 447.6 + 9.2 * Number(weight) + 3.1 * Number(height) - 4.3 * Number(age)
+      return 447.6 + 9.2 * Number(weight) + 3.1 * Number(height) - 4.3 * Number(age);
     }
-  }
+  };
 
   const calculateCalories = () => {
-    const bmr = calculateBMR()
-    const maintenanceCalories = bmr * activityLevel
-    const deficit = weightLossGoal * 1000
+    const bmr = calculateBMR();
+    const maintenanceCalories = bmr * activityLevel;
+    const deficit = weightLossGoal * 1000;
 
     setCalories({
       maintenance: Math.round(maintenanceCalories),
       weightLoss: Math.round(maintenanceCalories - deficit),
       bulk: Math.round(maintenanceCalories + 500),
       bmr: Math.round(bmr),
-    })
-  }
+    });
+  };
 
   return (
     <div className="calculator-bg">
@@ -44,7 +44,7 @@ export default function Calorie() {
             <div className="row">
               {/* Left Column - Calculator */}
               <div className="col-md-6">
-                <h1 className="h2 mb-4">Calorie Calculator</h1>
+                <h1 className="mb-4 t-30">Calorie Calculator</h1>
                 <div className="mb-2">
                   <label className="form-label">Weight (kg):</label>
                   <input
@@ -121,26 +121,22 @@ export default function Calorie() {
               {/* Right Column - Results */}
               <div className="col-md-6">
                 <h2 className="h2 mb-4">Results</h2>
-                <div className="row">
-                  <div className="col-12 mb-2">
-                    <div className="d-flex justify-content-between">
-                      <div style={{ width: "23%" }}>
-                        <div className="form-label text-nowrap">BMR:</div>
-                        <input type="text" className="form-control-sm w-100" value={calories.bmr} readOnly />
-                      </div>
-                      <div style={{ width: "23%" }}>
-                        <div className="form-label text-nowrap">Weight Maint.:</div>
-                        <input type="text" className="form-control-sm w-100" value={calories.maintenance} readOnly />
-                      </div>
-                      <div style={{ width: "23%" }}>
-                        <div className="form-label text-nowrap">Weight Loss:</div>
-                        <input type="text" className="form-control-sm w-100" value={calories.weightLoss} readOnly />
-                      </div>
-                      <div style={{ width: "23%" }}>
-                        <div className="form-label text-nowrap">Bulk:</div>
-                        <input type="text" className="form-control-sm w-100" value={calories.bulk} readOnly />
-                      </div>
-                    </div>
+                <div className="results-container">
+                  <div className="result-item">
+                    <span className="result-label">BMR:</span>
+                    <input type="text" className="result-input" value={calories.bmr} readOnly />
+                  </div>
+                  <div className="result-item">
+                    <span className="result-label">Weight Maint.:</span>
+                    <input type="text" className="result-input" value={calories.maintenance} readOnly />
+                  </div>
+                  <div className="result-item">
+                    <span className="result-label">Weight Loss:</span>
+                    <input type="text" className="result-input" value={calories.weightLoss} readOnly />
+                  </div>
+                  <div className="result-item">
+                    <span className="result-label">Bulk:</span>
+                    <input type="text" className="result-input" value={calories.bulk} readOnly />
                   </div>
                 </div>
               </div>
@@ -149,5 +145,5 @@ export default function Calorie() {
         </div>
       </div>
     </div>
-  )
+  );
 }

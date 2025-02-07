@@ -2,8 +2,18 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalculator, faWeight, faUtensils } from "@fortawesome/free-solid-svg-icons";
 
+// HeroSection memoizálása, hogy ne renderelődjön újra feleslegesen
+const HeroSection = React.memo(() => {
+  return (
+    <div>
+      <section className="hero-section">
+        <h1 className="hero-text">TOGETHER FOR A<br></br>FITTER FUTURE!</h1>
+      </section>
+    </div>
+  );
+});
+
 export default function Home() {
-  // Hover állapotkezelés minden kártyához
   const [hoveredCard, setHoveredCard] = useState(null);
 
   // Alapértelmezett és hover stílusok
@@ -18,21 +28,9 @@ export default function Home() {
     boxShadow: "0 10px 20px rgba(0, 0, 0, 0.15)",
   };
 
-  const HeroSection = () => {
-    return (
-      <div>
-      <section className="hero-section">
-       <h1 className="hero-text">TOGETHER FOR A<br></br>FITTER FUTURE!</h1>
-   </section>
-   </div>
-    )
-  }
-
   return (
-
     <div className="mt-5">
-      
-      <HeroSection />
+      <HeroSection /> {/* 🔹 Most már nem renderelődik újra minden hover eseménykor */}
       <section className="py-16 bg-gradient-to-br from-blue-200 via-blue-100 to-green-100">
         <div className="container">
           <h2 className="text-center mb-5 fw-bold text-dark">Our Services</h2>

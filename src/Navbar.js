@@ -39,7 +39,7 @@ export default function Navbar() {
   };
 
   return (
-    <div>
+    
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
           <Link className="navbar-brand" to="/">
@@ -86,6 +86,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
+   
   );
 }

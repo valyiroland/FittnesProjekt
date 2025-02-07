@@ -9,34 +9,36 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  // 🔹 Login függvény
   const handleLogin = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Az alapértelmezett form-elküldést blokkoljuk
     try {
-      // Lekérjük a salt értéket
+      // 🔹 Lekérjük a salt értéket
       const saltResponse = await axios.post(
         `http://localhost:5071/api/Login/GetSalt/${username}`
       );
       const salt = saltResponse.data;
 
-      // Hash generálás SHA-256-tal
+      // 🔹 SHA-256 hash generálás
       const encoder = new TextEncoder();
       const data = encoder.encode(password + salt);
       const hashBuffer = await crypto.subtle.digest("SHA-256", data);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 
-      // Belépés kérése
+      // 🔹 Login kérés a backendhez
       const loginResponse = await axios.post("http://localhost:5071/api/Login", {
         LoginName: username,
         TmpHash: hashHex,
       });
 
       const userData = loginResponse.data; // Backend válasza
-      localStorage.setItem("user", JSON.stringify(userData)); //  Adatok mentése localStorage-ba
+      localStorage.setItem("user", JSON.stringify(userData)); // 🔹 Adatok mentése localStorage-ba
 
-      setError("");
+      setError(""); // Hibák törlése
       alert("Sikeres bejelentkezés!");
-      navigate("/");
+      navigate("/", { replace: true }); // 🔹 Átirányítás és újratöltés
+      window.location.reload(); // 🔹 Oldal frissítése a főoldalon
     } catch (err) {
       setError(err.response?.data || "Hiba történt a bejelentkezés során");
     }
@@ -67,6 +69,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          
           <button type="submit" className="login-button">
             Login
           </button>
