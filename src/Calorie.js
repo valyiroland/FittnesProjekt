@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './Calorie.css';
 
 export default function Calorie() {
   const [weight, setWeight] = useState("")

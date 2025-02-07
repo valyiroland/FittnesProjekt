@@ -1,0 +1,22 @@
+.user-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .nav-username {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .logout-button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .logout-button:hover {
+    text-decoration: underline;
+  }
+  
