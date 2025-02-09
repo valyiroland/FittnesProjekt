@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Diet.css';
+
 export default function Diet() {
   const [selectedCategory, setSelectedCategory] = useState("Vegetables");
   const [foods, setFoods] = useState([]);
@@ -53,21 +54,21 @@ export default function Diet() {
         </select>
       </div>
 
-    <div className="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mb-5">
-      {foods && foods.map((food, index) => (
-  <div key={food.id || index} className="col">
-    <div id='Card' className="card border-dark">
-    <img className="card-img-top" src={food.imageUrl} alt={food.name}/>
-      <div className="card-body">
-        <h5 className="card-title">{food.name}</h5>
-        <p className="card-text">{food.calPer100g} kcal/100g</p>
-        <p className="card-text text-muted">{food.description}</p>
+      <div className="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mb-5">
+        {foods && foods.map((food, index) => (
+          <div key={food.id || index} className="col">
+            <div id='Card' className="card border-dark">
+              <img className="card-img-top" src={food.imageUrl} alt={food.name} />
+              <div className="card-body">
+                <h5 className="card-title">{food.name}</h5>
+                <p className="card-text">{food.calPer100g} kcal/100g</p>
+                <p className="card-text text-muted">{food.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-  </div>
- 
-))}
-      </div>
+
       <h2 className="font-weight-bold mb-4">Recipes</h2>
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
         {recipes && recipes.map((recipe, index) => (
@@ -75,14 +76,16 @@ export default function Diet() {
             <div className="card h-100 border-dark">
               <div className="card-body">
                 <h5 className="card-title">{recipe.name}</h5>
-                <p className="card-text">{recipe.calPer100g} kcal/serving</p>
                 <p className="card-text">{recipe.description}</p>
                 <div>
                   <p className="font-weight-bold mb-2">Ingredients:</p>
                   <ul className="list-unstyled">
-                    {recipe.ingredients && Array.isArray(recipe.ingredients) ? recipe.ingredients.map((ingredient, idx) => (
-                      <li key={ingredient + idx}>{ingredient}</li> 
-                    )) : <li>No ingredients available</li>}
+                    {recipe.ingredients && Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0
+                      ? recipe.ingredients.map((ingredient, idx) => (
+                          <li key={ingredient + idx}>{ingredient}</li>
+                        ))
+                      : <li>No ingredients available</li>
+                    }
                   </ul>
                 </div>
               </div>
