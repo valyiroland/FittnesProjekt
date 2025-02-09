@@ -1,6 +1,7 @@
 ﻿using FitprojectAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FitprojectAPI.Controllers
 {
@@ -10,21 +11,31 @@ namespace FitprojectAPI.Controllers
     {
         [HttpGet("Recipes")]
 
-public IActionResult GetR()
-{
-    using (var context = new FitprojectContext())
-    {
-        try
+        public IActionResult GetR()
         {
-            var recipes = context.FitprojectRecipes.ToList();
-                
-            return Ok(recipes);
+            using (var context = new FitprojectContext())
+            {
+                try
+                {
+                    var recipes = context.FitprojectRecipes
+                        .Include(r => r.FitprojectRecipeIngredients) 
+                        .ThenInclude(ri => ri.Ingredient) 
+                        .Select(r => new
+                        {
+                            r.Id,
+                            r.Name,
+                            r.Description,
+                            Ingredients = r.FitprojectRecipeIngredients.Select(ri => ri.Ingredient.Name).ToList()
+                        })
+                        .ToList();
+
+                    return Ok(recipes);
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex.Message);
+                }
+            }
         }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
-    }
-}
     }
 }

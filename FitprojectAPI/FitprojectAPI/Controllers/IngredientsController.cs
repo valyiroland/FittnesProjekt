@@ -24,7 +24,7 @@ namespace FitprojectAPI.Controllers
                 }
             }
         }
-        [HttpGet("category/{receptId}")]
+       /* [HttpGet("category/{receptId}")]
  public IActionResult GetByRecipeId(int receptId)
  {
      using (var context = new FitprojectContext())
@@ -39,6 +39,6 @@ namespace FitprojectAPI.Controllers
              return BadRequest(ex.Message);
          }
      }
- }
+ }*/
     }
 }
