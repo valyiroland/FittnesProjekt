@@ -24,5 +24,21 @@ namespace FitprojectAPI.Controllers
                 }
             }
         }
+        [HttpGet("category/{receptId}")]
+ public IActionResult GetByRecipeId(int receptId)
+ {
+     using (var context = new FitprojectContext())
+     {
+         try
+         {
+             var ingredients = context.FitprojectRecipeIngredients.Include(x=>x.Recipe).Include(x=>x.Ingredient).Where(x=>x.RecipeId == receptId).Select(x=>x.Ingredient.Name).ToList();
+             return Ok(ingredients);
+         }
+         catch (Exception ex)
+         {
+             return BadRequest(ex.Message);
+         }
+     }
+ }
     }
 }

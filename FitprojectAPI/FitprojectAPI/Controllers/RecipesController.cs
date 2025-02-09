@@ -10,20 +10,21 @@ namespace FitprojectAPI.Controllers
     {
         [HttpGet("Recipes")]
 
-        public IActionResult GetR()
+public IActionResult GetR()
+{
+    using (var context = new FitprojectContext())
+    {
+        try
         {
-            using (var context = new FitprojectContext())
-            {
-                try
-                {
-                    var recipes = context.FitprojectRecipes.Select(x => new { x.Name, x.Description}).ToList();
-                    return Ok(recipes);
-                }
-                catch (Exception ex)
-                {
-                    return BadRequest(ex.Message);
-                }
-            }
+            var recipes = context.FitprojectRecipes.ToList();
+                
+            return Ok(recipes);
         }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+}
     }
 }
