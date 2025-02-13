@@ -9,38 +9,50 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  // 🔹 Login függvény
+ 
+  const validatePassword = (password) => {
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
+    return passwordRegex.test(password);
+  };
+
+ 
   const handleLogin = async (e) => {
-    e.preventDefault(); // Az alapértelmezett form-elküldést blokkoljuk
+    e.preventDefault();
+
+    if (!validatePassword(password)) {
+      setError("The password must be 6 character long at least and must contain a capital and a numerical character!");
+      return;
+    }
+
     try {
-      // 🔹 Lekérjük a salt értéket
+     
       const saltResponse = await axios.post(
         `http://localhost:5071/api/Login/GetSalt/${username}`
       );
       const salt = saltResponse.data;
 
-      // 🔹 SHA-256 hash generálás
+     
       const encoder = new TextEncoder();
       const data = encoder.encode(password + salt);
       const hashBuffer = await crypto.subtle.digest("SHA-256", data);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 
-      // 🔹 Login kérés a backendhez
+     
       const loginResponse = await axios.post("http://localhost:5071/api/Login", {
         LoginName: username,
         TmpHash: hashHex,
       });
 
-      const userData = loginResponse.data; // Backend válasza
-      localStorage.setItem("user", JSON.stringify(userData)); // 🔹 Adatok mentése localStorage-ba
+      const userData = loginResponse.data;
+      localStorage.setItem("user", JSON.stringify(userData));
 
-      setError(""); // Hibák törlése
-      alert("Sikeres bejelentkezés!");
-      navigate("/", { replace: true }); // 🔹 Átirányítás és újratöltés
-      window.location.reload(); // 🔹 Oldal frissítése a főoldalon
+      setError("");
+      alert("Successfull login!");
+      navigate("/", { replace: true });
+      window.location.reload();
     } catch (err) {
-      setError(err.response?.data || "Hiba történt a bejelentkezés során");
+      setError(err.response?.data || "There was an error during the login.");
     }
   };
 
@@ -57,6 +69,7 @@ const Login = () => {
               placeholder="Enter your username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              required
             />
           </div>
           <div className="form-group">
@@ -69,7 +82,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          
+
           <button type="submit" className="login-button">
             Login
           </button>

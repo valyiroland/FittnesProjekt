@@ -23,11 +23,22 @@ const RegistryForm = () => {
     return CryptoJS.SHA256(password + salt).toString();
   };
 
+  // 🔹 Jelszó validálása: legalább 6 karakter, egy nagy betű és egy szám
+  const validatePassword = (password) => {
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
+    return passwordRegex.test(password);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
       setErrorMessage("Passwords do not match!");
+      return;
+    }
+
+    if (!validatePassword(password)) {
+      setErrorMessage("Password must be at least 6 characters long and contain at least one uppercase letter and one number.");
       return;
     }
 

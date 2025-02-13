@@ -29,6 +29,12 @@ function App() {
       case "/Calorie":
         activepage = "Calorie"
         break;
+        case "/Login":
+          activepage = "Login"
+          break;
+          case "/Registration":
+          activepage = "Registration"
+          break;
       default:
         activepage="Home"
         break;
