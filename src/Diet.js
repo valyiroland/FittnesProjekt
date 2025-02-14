@@ -38,8 +38,7 @@ export default function Diet() {
 
   return (
     <div className="container mt-5 pt-5 pb-5">
-      <h1 className="d-flex justify-content-center">Nutritional Guide</h1>
-      <br />
+      <h1 className="text-center mb-4">Nutritional Guide</h1>
       <div className="d-flex justify-content-center mb-4">
         <select
           value={selectedCategory}
@@ -47,52 +46,56 @@ export default function Diet() {
           className="form-select border-dark w-auto text-center"
         >
           {["Vegetables", "Fruits", "Meats and fishes", "Pasta and Breads", "Nuts and Legumes", "Dairy", "Others"].map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
+              <option key={category} value={category}>
+                {category}
+              </option>
           ))}
         </select>
       </div>
 
-      <div className="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mb-5">
-        {foods && foods.map((food, index) => (
-          <div key={food.id || index} className="col">
-            <div id='Card' className="card border-dark">
-              <img className="card-img-top" src={food.imageUrl} alt={food.name} />
-              <div className="card-body">
-                <h5 className="card-title">{food.name}</h5>
-                <p className="card-text">{food.calPer100g} kcal/100g</p>
-                <p className="card-text text-muted">{food.description}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <h2 className="font-weight-bold mb-4">Recipes</h2>
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
-        {recipes && recipes.map((recipe, index) => (
-          <div key={recipe.id || index} className="col">
-            <div className="card h-100 border-dark">
-              <div className="card-body">
-                <h5 className="card-title">{recipe.name}</h5>
-                <p className="card-text">{recipe.description}</p>
-                <div>
-                  <p className="font-weight-bold mb-2">Ingredients:</p>
-                  <ul className="list-unstyled">
-                    {recipe.ingredients && Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0
-                      ? recipe.ingredients.map((ingredient, idx) => (
-                          <li key={ingredient + idx}>{ingredient}</li>
-                        ))
-                      : <li>No ingredients available</li>
-                    }
-                  </ul>
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 mb-5">
+        {foods &&
+          foods.map((food, index) => (
+            <div key={food.id || index} className="col">
+              <div className="card h-100 border-dark food-card">
+                <div className="food-image-container">
+                  <img className="card-img-top food-image" src={food.imageUrl || "/placeholder.svg"} alt={food.name} />
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title">{food.name}</h5>
+                  <p className="card-text">{food.calPer100g} kcal/100g</p>
+                  <p className="card-text text-muted mt-auto">{food.description}</p>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+      </div>
+
+      <h2 className="font-weight-bold mb-4 text-center">Recipes</h2>
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+        {recipes &&
+          recipes.map((recipe, index) => (
+            <div key={recipe.id || index} className="col">
+              <div className="card h-100 border-dark">
+                <div className="card-body">
+                  <h5 className="card-title">{recipe.name}</h5>
+                  <p className="card-text">{recipe.description}</p>
+                  <div>
+                    <p className="font-weight-bold mb-2">Ingredients:</p>
+                    <ul className="list-unstyled">
+                      {recipe.ingredients && Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0 ? (
+                        recipe.ingredients.map((ingredient, idx) => <li key={ingredient + idx}>{ingredient}</li>)
+                      ) : (
+                        <li>No ingredients available</li>
+                      )}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
       </div>
     </div>
   );
 }
+

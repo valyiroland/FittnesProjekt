@@ -38,11 +38,11 @@ export default function Calorie() {
 
   return (
     <div className="calculator-bg">
-      <div className="container py-4">
+      <div className="container py-4 px-3 px-md-4">
         <div className="row justify-content-center">
           <div className="col-12">
             <div className="row">
-              {/* Left Column - Calculator */}
+              {/* Bal oldali oszlop - Kalkulátor */}
               <div className="col-md-6">
                 <h1 className="mb-4 t-30">Calorie Calculator</h1>
                 <div className="mb-2">
@@ -118,8 +118,8 @@ export default function Calorie() {
                 </div>
               </div>
 
-              {/* Right Column - Results */}
-              <div className="col-md-6">
+              {/* Jobb oldali oszlop - Eredmények */}
+              <div className="col-md-6 mt-4 mt-md-0">
                 <h2 className="h2 mb-4">Results</h2>
                 <div className="results-container">
                   <div className="result-item">

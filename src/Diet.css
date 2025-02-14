@@ -1,11 +1,70 @@
-#Card{
-    height: 400px;
-}
-.card-img-top{
-    height: 200PX;
-    width: 300;
-}
-#navbarlogo{
+.food-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .food-image-container {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .food-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .card-text.text-muted {
+    margin-top: auto;
+  }
+  
+  #navbarlogo {
     width: 50px;
     height: auto;
-}
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    h1,
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .form-select {
+      width: 100% !important;
+    }
+  
+    .food-card {
+      margin-bottom: 1rem;
+    }
+  
+    .food-image-container {
+      height: 150px;
+    }
+  }
+  
+  @media (min-width: 577px) and (max-width: 768px) {
+    .food-card {
+      height: 350px;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .food-card {
+      height: 400px;
+    }
+  }
+  
+  

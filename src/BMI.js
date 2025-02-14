@@ -14,7 +14,7 @@ export default function BMI() {
       const heightInMeters = height / 100;
       const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
       setResult(`Your BMI is ${bmi}`);
-     
+
       // Kategorizálás a BMI alapján
       if (bmi < 18.5) {
         setCategory("Underweight");
@@ -29,7 +29,7 @@ export default function BMI() {
       setResult("Please enter valid height and weight values.");
       setCategory("");  // Töröljük a kategóriát, ha érvénytelen adatot adtak meg
     }
-  };
+  }
 
   const clearFields = () => {
     setAge("");
@@ -41,9 +41,9 @@ export default function BMI() {
   };
 
   return (
-    <main>
-      <h1 className='mainStyle'>BMI Calculator</h1>
-      <div className="form-container">
+    <main className="container py-4 px-3 px-md-4">
+      <h1 className="mainStyle">BMI Calculator</h1>
+      <div className="form-container mx-auto" style={{ maxWidth: "400px" }}>
         <label>
           Height (cm)
           <input
@@ -51,7 +51,7 @@ export default function BMI() {
             placeholder="cm"
             value={height}
             onChange={(e) => setHeight(e.target.value)}
-            min="0" // Ne lehessen 0-nál kisebb értéket megadni
+            min="0"
           />
         </label>
         <label>
@@ -61,14 +61,15 @@ export default function BMI() {
             placeholder="kg"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
-            min="0" // Ne lehessen 0-nál kisebb értéket megadni
+            min="0"
           />
         </label>
         <label>
           Gender
           <div className="gender-container">
             <label id="gender-label">
-              <input id="radio-btn-gender"
+              <input
+                id="radio-btn-gender"
                 type="radio"
                 name="gender"
                 value="Male"
@@ -78,7 +79,8 @@ export default function BMI() {
               Male
             </label>
             <label id="gender-label">
-              <input id="radio-btn-gender"
+              <input
+                id="radio-btn-gender"
                 type="radio"
                 name="gender"
                 value="Female"

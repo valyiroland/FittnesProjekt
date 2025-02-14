@@ -26,7 +26,7 @@ export default function Navbar() {
       const storedUser = localStorage.getItem("token");
       console.log(token)
       if (!token) return;
-      
+
       await axios.post(`http://localhost:5071/api/LogOut?uId=${token}`);
 
       localStorage.removeItem("user"); // 🔹 Felhasználói adatok törlése
@@ -40,33 +40,31 @@ export default function Navbar() {
 
   return (
     
-      <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-        <div className="container">
-          <Link className="navbar-brand" to="/">
-            <img id="navbarlogo" src="navbarlogo.png" alt="Logo" />
-          </Link>
+    <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+      <div className="container">
+        <Link className="navbar-brand" to="/">
+          <img id="navbarlogo" src="navbarlogo.png" alt="Logo" />
+        </Link>
 
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-          <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
+        <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
                 <Link className="nav-link text-dark" to="/">Home</Link>
-              </li>
-              <li className="nav-item">
+            </li>
+            <li className="nav-item">
                 <Link className="nav-link text-dark" to="/BMI">BMI</Link>
-              </li>
-              <li className="nav-item">
+            </li>
+            <li className="nav-item">
                 <Link className="nav-link text-dark" to="/Calorie">Calorie</Link>
-              </li>
-              <li className="nav-item">
+            </li>
+            <li className="nav-item">
                 <Link className="nav-link text-dark" to="/Diet">Diet</Link>
-              </li>
-            </ul>
-          </div>
-
+            </li>
+          </ul>
           <div className="user-icons">
             {username ? (
               <>
@@ -85,7 +83,9 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
    
   );
 }
+

@@ -1,29 +1,53 @@
 .user-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-username {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 14px;
+}
+.logout-button:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    margin-bottom: 1rem;
   }
-  
+
+  .user-icons {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
   .nav-username {
-    font-weight: bold;
-    margin-right: 10px;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
-  
-  .logout-button {
-    background: none;
-    border: none;
-    color: red;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  .logout-button:hover {
-    text-decoration: underline;
-  }
-  
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1030;
-  }
+}
+
+#navbarlogo {
+  max-height: 40px;
+  width: auto;
+}
+

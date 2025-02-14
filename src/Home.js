@@ -7,7 +7,10 @@ const HeroSection = React.memo(() => {
   return (
     <div>
       <section className="hero-section">
-        <h1 className="hero-text">TOGETHER FOR A<br></br>FITTER FUTURE!</h1>
+        <h1 className="hero-text">
+          TOGETHER FOR A<br />
+          FITTER FUTURE!
+        </h1>
       </section>
     </div>
   );
@@ -30,13 +33,13 @@ export default function Home() {
 
   return (
     <div className="mt-5">
-      <HeroSection /> {/* 🔹 Most már nem renderelődik újra minden hover eseménykor */}
-      <section className="py-16 bg-gradient-to-br from-blue-200 via-blue-100 to-green-100">
+      <HeroSection />
+      <section className="py-16 bg-gradient-to-br from-blue-200 via-blue-100 to-green-100 services-section">
         <div className="container">
           <h2 className="text-center mb-5 fw-bold text-dark">Our Services</h2>
-          <div className="row g-4">
+          <div className="row g-4 justify-content-center">
             {/* Calorie Goal Calculator */}
-            <div className="col-md-4">
+            <div className="col-md-6 col-lg-4">
               <div
                 className="card h-100 text-center shadow-sm border-0"
                 style={hoveredCard === 1 ? hoverStyle : defaultStyle}
@@ -55,7 +58,7 @@ export default function Home() {
               </div>
             </div>
             {/* BMI Calculator */}
-            <div className="col-md-4">
+            <div className="col-md-6 col-lg-4">
               <div
                 className="card h-100 text-center shadow-sm border-0"
                 style={hoveredCard === 2 ? hoverStyle : defaultStyle}
@@ -74,7 +77,7 @@ export default function Home() {
               </div>
             </div>
             {/* Diet Plans */}
-            <div className="col-md-4">
+            <div className="col-md-6 col-lg-4">
               <div
                 className="card h-100 text-center shadow-sm border-0"
                 style={hoveredCard === 3 ? hoverStyle : defaultStyle}
@@ -98,3 +101,4 @@ export default function Home() {
     </div>
   );
 }
+

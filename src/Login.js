@@ -9,13 +9,13 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
- 
+
   const validatePassword = (password) => {
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
     return passwordRegex.test(password);
   };
 
- 
+
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -31,14 +31,14 @@ const Login = () => {
       );
       const salt = saltResponse.data;
 
-     
+
       const encoder = new TextEncoder();
       const data = encoder.encode(password + salt);
       const hashBuffer = await crypto.subtle.digest("SHA-256", data);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 
-     
+
       const loginResponse = await axios.post("http://localhost:5071/api/Login", {
         LoginName: username,
         TmpHash: hashHex,
@@ -80,6 +80,7 @@ const Login = () => {
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
 
@@ -87,10 +88,10 @@ const Login = () => {
             Login
           </button>
         </form>
-        <p style={{ marginTop: "20px" }}>
+        <p className="auth-link">
           Don’t have an account? <Link to="/Registration">Create one</Link>
         </p>
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        {error && <p className="error-message">{error}</p>}
       </div>
     </div>
   );
