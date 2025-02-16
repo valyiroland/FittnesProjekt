@@ -16,9 +16,9 @@ namespace FitprojectAPI.Controllers
                 {
                     Program.LoggedInUsers.Remove(uId);
                 }
-                return Ok("Sikeres kijelentkezés!");
+                return Ok("Successful logout!");
             }
-            return NotFound("Nem található felhasználó");
+            return NotFound("User not found");
 
         }
     }

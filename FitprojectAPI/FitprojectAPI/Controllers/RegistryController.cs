@@ -17,19 +17,19 @@ namespace FitprojectAPI.Controllers
                 {
                     if (context.FitprojectUsers.FirstOrDefault(u => u.Name == user.Name) != null)
                     {
-                        return BadRequest("A felhasználónév foglalt!");
+                        return BadRequest("Username is already taken!");
                     }
                     if (context.FitprojectUsers.FirstOrDefault(u => u.Email == user.Email) != null)
                     {
-                        return BadRequest("Az email cím már foglalt!");
+                        return BadRequest("Email address is already taken!");
                     }
                     user.Aktiv = 0;
                     user.Jogosultsag = 0;
                     user.Hash = Program.CreateSHA256(user.Hash);
                     await context.FitprojectUsers.AddAsync(user);
                     await context.SaveChangesAsync();
-                    Program.SendEmail(user.Email, "Regisztráció", $"A következő linkre kattintva véglegesítse a regisztrációját: \nhttp://localhost:5071/Registry?name={user.Name}&email={user.Email}");
-                    return Ok("Sikeres regisztráció! Az aktiváláshoz ellenőrizze az email fiókját!");
+                    Program.SendEmail(user.Email, "Registration", $"Click the following link to finalize your registration.: \nhttp://localhost:5071/Registry?name={user.Name}&email={user.Email}");
+                    return Ok("Successful registration! Check your email for activation!");
                 }
                 catch (Exception ex)
                 {
@@ -50,7 +50,7 @@ namespace FitprojectAPI.Controllers
                     var user = context.FitprojectUsers.FirstOrDefault(u => u.Name == name && u.Email == email);
                     if (user == null)
                     {
-                        return BadRequest("Sikertelen aktiválás.");
+                        return BadRequest("Activation failed!");
 
 
 
@@ -58,7 +58,7 @@ namespace FitprojectAPI.Controllers
                     user.Aktiv = 1;
                     context.FitprojectUsers.Update(user);
                     await context.SaveChangesAsync();
-                    return Ok("siker aktiválás!");
+                    return Ok("Successful activation!");
 
                 }
                 catch (Exception ex)
