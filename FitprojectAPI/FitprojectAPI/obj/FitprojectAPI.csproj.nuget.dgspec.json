@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj": {}
+    "C:\\Users\\Béla\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj": {
+    "C:\\Users\\Béla\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Béla\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj",
         "projectName": "FitprojectAPI",
-        "projectPath": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\obj\\",
+        "projectPath": "C:\\Users\\Béla\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj",
+        "packagesPath": "C:\\Users\\Béla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Béla\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Béla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -87,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

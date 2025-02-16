@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FitprojectAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2adb33b06e89a90534bdfac2801dec7f99f7c60")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49c83d80a3c27c7a31c1856f671ba057045388ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("FitprojectAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FitprojectAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

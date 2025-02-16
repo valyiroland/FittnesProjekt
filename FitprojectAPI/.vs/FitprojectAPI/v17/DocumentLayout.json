@@ -1,49 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\lenovo\\desktop\\backend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\logoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\logoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\forgotpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\forgotpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\lenovo\\desktop\\backend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\lenovo\\desktop\\backend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectcalory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectcalory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\lenovo\\desktop\\backend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\ingredientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\ingredientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\lenovo\\desktop\\backend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\lenovo\\desktop\\backend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\lenovo\\desktop\\backend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectrecipeingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectcalory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectcalory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\ingredientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\ingredientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectrecipeingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectrecipeingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\lenovo\\desktop\\backend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectrecipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectrecipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectrecipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\lenovo\\desktop\\backend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\lenovo\\desktop\\backend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\lenovo\\desktop\\backend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectbmi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\b\u00E9la\\desktop\\backend2\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\models\\fitprojectbmi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\models\\fitprojectbmi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -54,33 +70,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FitprojectUser.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectUser.cs",
-              "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectUser.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectUser.cs*",
-              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectUser.cs*",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAxwBsAAAAQAAAA",
+              "DocumentIndex": 0,
+              "Title": "LogOutController.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\LogOutController.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\LogOutController.cs",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\LogOutController.cs",
+              "RelativeToolTip": "FitprojectAPI\\Controllers\\LogOutController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T07:18:36.54Z",
+              "WhenOpened": "2025-02-16T14:18:35.403Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FitprojectRecipeIngredient.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectRecipeIngredient.cs",
-              "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectRecipeIngredient.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectRecipeIngredient.cs*",
-              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectRecipeIngredient.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T07:18:26.12Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -112,120 +123,176 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RecipesController.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\RecipesController.cs",
-              "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\RecipesController.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\RecipesController.cs*",
-              "RelativeToolTip": "FitprojectAPI\\Controllers\\RecipesController.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABjAAAA",
+              "DocumentIndex": 1,
+              "Title": "RegistryController.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\RegistryController.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\RegistryController.cs",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\RegistryController.cs",
+              "RelativeToolTip": "FitprojectAPI\\Controllers\\RegistryController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwDwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T11:07:10.337Z",
+              "WhenOpened": "2025-02-16T14:30:03.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IngredientsController.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\IngredientsController.cs",
-              "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\IngredientsController.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\IngredientsController.cs",
-              "RelativeToolTip": "FitprojectAPI\\Controllers\\IngredientsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "FitprojectAPI\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T10:10:56.759Z",
+              "WhenOpened": "2025-02-16T14:24:56.201Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ForgotPasswordController.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\ForgotPasswordController.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\ForgotPasswordController.cs",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\ForgotPasswordController.cs",
+              "RelativeToolTip": "FitprojectAPI\\Controllers\\ForgotPasswordController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T14:18:55.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FitprojectUser.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectUser.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectUser.cs",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectUser.cs",
+              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectUser.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T07:18:36.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FitprojectRecipeIngredient.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectRecipeIngredient.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectRecipeIngredient.cs",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectRecipeIngredient.cs",
+              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectRecipeIngredient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T07:18:26.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RecipesController.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\RecipesController.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\RecipesController.cs",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\RecipesController.cs",
+              "RelativeToolTip": "FitprojectAPI\\Controllers\\RecipesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T11:07:10.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IngredientsController.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\IngredientsController.cs",
+              "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\IngredientsController.cs",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\IngredientsController.cs",
+              "RelativeToolTip": "FitprojectAPI\\Controllers\\IngredientsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T10:10:56.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "FitprojectCalory.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectCalory.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectCalory.cs",
               "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectCalory.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectCalory.cs*",
-              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectCalory.cs*",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectCalory.cs",
+              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectCalory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T10:08:19.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-28T10:08:19.552Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "FitprojectCategory.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectCategory.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectCategory.cs",
               "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectCategory.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectCategory.cs*",
-              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectCategory.cs*",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectCategory.cs",
+              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectCategory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T10:08:32.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-28T10:08:32.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Program.cs",
               "RelativeDocumentMoniker": "FitprojectAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Program.cs",
               "RelativeToolTip": "FitprojectAPI\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-28T09:59:17.471Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "FitprojectRecipe.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectRecipe.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectRecipe.cs",
               "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectRecipe.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectRecipe.cs*",
-              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectRecipe.cs*",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectRecipe.cs",
+              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectRecipe.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T07:18:16.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-02T07:18:16.92Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "FitprojectIngredient.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectIngredient.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectIngredient.cs",
               "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectIngredient.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectIngredient.cs*",
-              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectIngredient.cs*",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectIngredient.cs",
+              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectIngredient.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T10:08:46.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-28T10:08:46.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "FitprojectContext.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectContext.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectContext.cs",
               "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectContext.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectContext.cs",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectContext.cs",
               "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectContext.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAQwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T10:06:29.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-28T10:06:29.071Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "FitprojectBmi.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectBmi.cs",
+              "DocumentMoniker": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectBmi.cs",
               "RelativeDocumentMoniker": "FitprojectAPI\\Models\\FitprojectBmi.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\backend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectBmi.cs*",
-              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectBmi.cs*",
+              "ToolTip": "C:\\Users\\B\u00E9la\\Desktop\\backend2\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Models\\FitprojectBmi.cs",
+              "RelativeToolTip": "FitprojectAPI\\Models\\FitprojectBmi.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T10:06:50.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-28T10:06:50.974Z"
             }
           ]
         }
