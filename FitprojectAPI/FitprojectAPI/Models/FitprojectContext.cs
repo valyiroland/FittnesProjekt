@@ -23,6 +23,8 @@ public partial class FitprojectContext : DbContext
 
     public virtual DbSet<FitprojectIngredient> FitprojectIngredients { get; set; }
 
+    public virtual DbSet<FitprojectPasswordreset> FitprojectPasswordresets { get; set; }
+
     public virtual DbSet<FitprojectRecipe> FitprojectRecipes { get; set; }
 
     public virtual DbSet<FitprojectRecipeIngredient> FitprojectRecipeIngredients { get; set; }
@@ -148,6 +150,33 @@ public partial class FitprojectContext : DbContext
                 .HasConstraintName("fitproject_ingredients_ibfk_1");
         });
 
+        modelBuilder.Entity<FitprojectPasswordreset>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.ToTable("fitproject_passwordresets");
+
+            entity.HasIndex(e => e.Email, "email");
+
+            entity.Property(e => e.Id)
+                .HasColumnType("int(11)")
+                .HasColumnName("id");
+            entity.Property(e => e.Email)
+                .HasMaxLength(100)
+                .HasColumnName("email");
+            entity.Property(e => e.ExpiryTime)
+                .HasColumnType("datetime")
+                .HasColumnName("expiry_time");
+            entity.Property(e => e.Token)
+                .HasMaxLength(64)
+                .HasColumnName("token");
+
+            entity.HasOne(d => d.EmailNavigation).WithMany(p => p.FitprojectPasswordresets)
+                .HasPrincipalKey(p => p.Email)
+                .HasForeignKey(d => d.Email)
+                .HasConstraintName("fitproject_passwordresets_ibfk_1");
+        });
+
         modelBuilder.Entity<FitprojectRecipe>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");
@@ -200,6 +229,8 @@ public partial class FitprojectContext : DbContext
             entity.HasKey(e => e.Id).HasName("PRIMARY");
 
             entity.ToTable("fitproject_users");
+
+            entity.HasIndex(e => e.Email, "email").IsUnique();
 
             entity.Property(e => e.Id)
                 .HasColumnType("int(11)")

@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace FitprojectAPI.Controllers
 {
@@ -9,37 +11,64 @@ namespace FitprojectAPI.Controllers
     [ApiController]
     public class ForgotPasswordController : ControllerBase
     {
-        [HttpPut]
-
-        public IActionResult ForgotPassword(FitprojectUser user)
+        [HttpPost]
+        public IActionResult ForgotPassword(string email)
         {
-            using (var context = new FitprojectContext())
+            if (string.IsNullOrEmpty(email))
             {
-                try
+                return BadRequest("Email is required.");
+            }
+
+            try
+            {
+                using (var context = new FitprojectContext())
                 {
-                    var existingUser = context.FitprojectUsers.FirstOrDefault(u => u.Email == user.Email);
+                    var existingUser = context.FitprojectUsers.FirstOrDefault(u => u.Email == email);
                     if (existingUser == null)
                     {
                         return BadRequest("Email address not found!");
                     }
-                    Program.SendEmail(user.Email, "Password Reset", $"Click the following link to reset your password.: \nhttp://localhost:5071/ForgotPassword?name={user.Name}&email={user.Email}");
-                    // Új SALT generálása
-                    string newSalt = Program.GenerateSalt();
-                    existingUser.Salt = newSalt;
 
-                    // Új HASH generálása a SALT hozzáadásával
-                    string saltedPassword = user.Hash + newSalt;
-                    existingUser.Hash = Program.CreateSHA256(saltedPassword);
+                    var existingEmail = context.FitprojectPasswordresets.FirstOrDefault(u => u.Email == email);
+                    if (existingEmail != null)
+                    {
+                        return BadRequest("We have already sent an email to this email address!");
+                    }
 
+                    // Token generálása
+                    string token = GenerateToken();
+                    DateTime expiryTime = DateTime.Now.AddHours(1); // 1 óra lejárati idő
+
+                    // Token mentése az adatbázisba
+                    var passwordReset = new FitprojectPasswordreset
+                    {
+                        Email = email,
+                        Token = token,
+                        ExpiryTime = expiryTime
+                    };
+                    context.FitprojectPasswordresets.Add(passwordReset);
                     context.SaveChanges();
-                    return Ok("Password successfully changed!");
                     
+                    // Küldjünk egy emailt a tokennel
+                    string resetLink = $"http://localhost:3000/ForgotPassword/{token}";
+                    Program.SendEmail(email, "Password Reset", $"Click the link below to reset your password:\n{resetLink}");
 
+                    return Ok("Password reset email sent successfully.");
                 }
-                catch (Exception ex)
-                {
-                    return BadRequest(ex.Message);
-                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error occurred: {ex.Message}");
+            }
+        }
+
+        private string GenerateToken()
+        {
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                byte[] tokenData = new byte[32];
+                rng.GetBytes(tokenData);
+                return Convert.ToBase64String(tokenData).Replace("+", "").Replace("/", "").Replace("=", "");
             }
         }
 

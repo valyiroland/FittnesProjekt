@@ -1,8 +1,104 @@
 [
   {
-    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
-    "Method": "GetD",
-    "RelativePath": "Ingredients/Dairy",
+    "ContainingType": "FitprojectAPI.Controllers.BmiController",
+    "Method": "AddBmi",
+    "RelativePath": "api/Bmi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bmi",
+        "Type": "FitprojectAPI.Models.FitprojectBmi",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.CalorieController",
+    "Method": "AddCal",
+    "RelativePath": "api/Calorie/AddCal",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "calorie",
+        "Type": "FitprojectAPI.Models.FitprojectCalory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.ForgotPasswordController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/ForgotPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "FitprojectAPI.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.LoginController",
+    "Method": "GetSalt",
+    "RelativePath": "api/Login/GetSalt/{Name}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.LogOutController",
+    "Method": "Logout",
+    "RelativePath": "api/LogOut",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.UserController",
+    "Method": "GetAllDTO",
+    "RelativePath": "api/User/GetAllDTO",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -11,62 +107,18 @@
   },
   {
     "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
-    "Method": "GetF",
-    "RelativePath": "Ingredients/Fruit",
+    "Method": "GetByCategory",
+    "RelativePath": "Ingredients/category/{categoryId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
-    "Method": "GetMF",
-    "RelativePath": "Ingredients/Meats\u0026Fishes",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
-    "Method": "GetNL",
-    "RelativePath": "Ingredients/Nuts\u0026Legumes",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
-    "Method": "GetO",
-    "RelativePath": "Ingredients/Others",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
-    "Method": "GetP",
-    "RelativePath": "Ingredients/Pasta",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
-    "Method": "GetV",
-    "RelativePath": "Ingredients/Vegetables",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -77,6 +129,43 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.RegistryController",
+    "Method": "Registry",
+    "RelativePath": "Registry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "FitprojectAPI.Models.FitprojectUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.RegistryController",
+    "Method": "Activate",
+    "RelativePath": "Registry",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   }
 ]
