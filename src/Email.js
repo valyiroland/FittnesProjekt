@@ -36,7 +36,7 @@ export default function Email() {
       }
     } catch (err) {
       console.error('Fetch error: ', err);
-      setError('Wrong email address');
+      setError('Either the email address is incorrect or an email has already been sent to this address.');
       setMessage('');
     }
   };
