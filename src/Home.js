@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalculator, faWeight, faUtensils } from "@fortawesome/free-solid-svg-icons";
-
+import './Home.css';
 // HeroSection memoizálása, hogy ne renderelődjön újra feleslegesen
 const HeroSection = React.memo(() => {
   return (
@@ -40,7 +40,7 @@ export default function Home() {
           <div className="row g-4 justify-content-center">
             {/* Calorie Goal Calculator */}
             <div className="col-md-6 col-lg-4">
-              <div
+              <div id="card"
                 className="card h-100 text-center shadow-sm border-0"
                 style={hoveredCard === 1 ? hoverStyle : defaultStyle}
                 onMouseEnter={() => setHoveredCard(1)}
@@ -59,7 +59,7 @@ export default function Home() {
             </div>
             {/* BMI Calculator */}
             <div className="col-md-6 col-lg-4">
-              <div
+              <div id="card"
                 className="card h-100 text-center shadow-sm border-0"
                 style={hoveredCard === 2 ? hoverStyle : defaultStyle}
                 onMouseEnter={() => setHoveredCard(2)}
@@ -78,7 +78,7 @@ export default function Home() {
             </div>
             {/* Diet Plans */}
             <div className="col-md-6 col-lg-4">
-              <div
+              <div id="card"
                 className="card h-100 text-center shadow-sm border-0"
                 style={hoveredCard === 3 ? hoverStyle : defaultStyle}
                 onMouseEnter={() => setHoveredCard(3)}

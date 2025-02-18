@@ -89,6 +89,10 @@ const Login = () => {
           </button>
         </form>
         <p className="auth-link">
+         <Link to="/Email" style={{color:"red"}}>Forgot your password?</Link>
+        </p>
+        
+        <p className="auth-link">
           Don’t have an account? <Link to="/Registration">Create one</Link>
         </p>
         {error && <p className="error-message">{error}</p>}

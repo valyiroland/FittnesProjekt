@@ -11,6 +11,8 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './Login';
 import Registration from './Registration';
 import { useEffect } from 'react';
+import Email from './Email';
+import ForgotPassword from './ForgotPassword';
 
 
 function App() {
@@ -56,6 +58,8 @@ function App() {
           <Route path='/BMI' element={<BMI/>}/>
           <Route path='/Login' element={<Login/>}/>
           <Route path='/Registration' element={<Registration/>}/>
+          <Route path='/Email' element={<Email/>}/>
+          <Route path='/ForgotPassword' element={<ForgotPassword/>}/>
         </Routes>
       <Footer/>
     </div>
