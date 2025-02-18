@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 
 export default function ForgotPassword() {
+  const { token } = useParams(); // Token beolvasása az URL-ből
+  const navigate = useNavigate(); // Navigáció kezelés
+
+  useEffect(() => {
+    if (!token) {
+      // Ha nincs token az URL-ben, visszairányítás a főoldalra
+      navigate('/');
+    }
+  }, [token, navigate]);
+
   return (
     <div>
         <div className="content2">
