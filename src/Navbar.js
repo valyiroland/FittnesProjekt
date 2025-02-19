@@ -78,7 +78,7 @@ export default function Navbar() {
                 <FontAwesomeIcon icon={faUser} />
               </Link>
             )}
-            <Link to="/Info">
+            <Link to="/Profile">
               <FontAwesomeIcon icon={faInfoCircle} />
             </Link>
           </div>

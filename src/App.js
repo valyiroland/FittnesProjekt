@@ -13,6 +13,7 @@ import Registration from './Registration';
 import { useEffect } from 'react';
 import Email from './Email';
 import ForgotPassword from './ForgotPassword';
+import Profile from './Profile';
 
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
           <Route path='/Registration' element={<Registration/>}/>
           <Route path='/Email' element={<Email/>}/>
           <Route path='/ForgotPassword/:token' element={<ForgotPassword/>}/>
+          <Route path='Profile' element={<Profile/>}/>
         </Routes>
       <Footer/>
     </div>
