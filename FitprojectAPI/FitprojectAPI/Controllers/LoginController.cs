@@ -62,7 +62,7 @@ namespace FitprojectAPI.Controllers
                         });
 
                     }
-                    return NotFound("Felhasználó nem található vagy nem aktív!");
+                    return NotFound("User not found or not active!");
                 }
                 catch (Exception ex)
                 {

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\iroczkib\\desktop\\fitnessbackend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\forgotpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\forgotpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\iroczkib\\desktop\\fitnessbackend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\iroczkib\\desktop\\fitnessbackend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\iroczkib\\desktop\\fitnessbackend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\iroczkib\\desktop\\fitnessbackend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\forgotpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\controllers\\forgotpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\iroczkib\\desktop\\fitnessbackend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|solutionrelative:fitprojectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DBD53C8D-D1DD-4E07-A0C7-31441A193D2C}|FitprojectAPI\\FitprojectAPI.csproj|c:\\users\\iroczkib\\desktop\\fitnessbackend\\fittnesprojekt\\fitprojectapi\\fitprojectapi\\controllers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -122,39 +122,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\LoginController.cs",
               "ToolTip": "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\LoginController.cs",
               "RelativeToolTip": "FitprojectAPI\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwEAAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T06:50:08.517Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\UserController.cs",
               "RelativeToolTip": "FitprojectAPI\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T14:24:56.201Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ForgotPasswordController.cs",
               "DocumentMoniker": "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\ForgotPasswordController.cs",
               "RelativeDocumentMoniker": "FitprojectAPI\\Controllers\\ForgotPasswordController.cs",
               "ToolTip": "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Controllers\\ForgotPasswordController.cs",
               "RelativeToolTip": "FitprojectAPI\\Controllers\\ForgotPasswordController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAwwHAAAABjAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwHAAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T14:18:55.383Z",
               "EditorCaption": ""
@@ -197,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\Program.cs",
               "RelativeDocumentMoniker": "FitprojectAPI\\Program.cs",
@@ -205,8 +205,7 @@
               "RelativeToolTip": "FitprojectAPI\\Program.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAhwFUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T09:59:17.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-28T09:59:17.471Z"
             },
             {
               "$type": "Document",
@@ -218,8 +217,7 @@
               "RelativeToolTip": "FitprojectAPI\\Controllers\\RegistryController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAIwCYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:30:03.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T14:30:03.514Z"
             },
             {
               "$type": "Document",
