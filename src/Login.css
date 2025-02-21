@@ -78,3 +78,28 @@
   }
 }
 
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  padding-right: 40px; /* Helyet adunk a gombnak az input mezőn */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.toggle-password:hover {
+  color: #0056b3;
+}
+
