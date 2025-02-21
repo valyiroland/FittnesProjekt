@@ -48,6 +48,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FitprojectAPI.Controllers.ForgotPasswordController",
+    "Method": "NewPassword",
+    "RelativePath": "api/ForgotPassword/NewPassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FitprojectAPI.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login",
@@ -97,12 +118,18 @@
   },
   {
     "ContainingType": "FitprojectAPI.Controllers.UserController",
-    "Method": "GetAllDTO",
-    "RelativePath": "api/User/GetAllDTO",
+    "Method": "GetUserDTO",
+    "RelativePath": "api/User",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

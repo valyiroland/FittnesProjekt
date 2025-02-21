@@ -5,10 +5,81 @@
     "version": "1.0"
   },
   "paths": {
-    "/Ingredients/Vegetables": {
-      "get": {
+    "/api/Bmi": {
+      "post": {
         "tags": [
-          "Ingredients"
+          "Bmi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FitprojectBmi"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FitprojectBmi"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FitprojectBmi"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Calorie/AddCal": {
+      "post": {
+        "tags": [
+          "Calorie"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FitprojectCalory"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FitprojectCalory"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FitprojectCalory"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ForgotPassword": {
+      "post": {
+        "tags": [
+          "ForgotPassword"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -17,10 +88,26 @@
         }
       }
     },
-    "/Ingredients/Fruit": {
-      "get": {
+    "/api/ForgotPassword/NewPassword": {
+      "put": {
         "tags": [
-          "Ingredients"
+          "ForgotPassword"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "newPassword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -29,10 +116,21 @@
         }
       }
     },
-    "/Ingredients/Meats&Fishes": {
+    "/Ingredients/category/{categoryId}": {
       "get": {
         "tags": [
           "Ingredients"
+        ],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -41,10 +139,20 @@
         }
       }
     },
-    "/Ingredients/Pasta": {
-      "get": {
+    "/api/Login/GetSalt/{Name}": {
+      "post": {
         "tags": [
-          "Ingredients"
+          "Login"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -53,11 +161,30 @@
         }
       }
     },
-    "/Ingredients/Nuts&Legumes": {
-      "get": {
+    "/api/Login": {
+      "post": {
         "tags": [
-          "Ingredients"
+          "Login"
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -65,22 +192,19 @@
         }
       }
     },
-    "/Ingredients/Dairy": {
-      "get": {
+    "/api/LogOut": {
+      "post": {
         "tags": [
-          "Ingredients"
+          "LogOut"
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
+        "parameters": [
+          {
+            "name": "uId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
           }
-        }
-      }
-    },
-    "/Ingredients/Others": {
-      "get": {
-        "tags": [
-          "Ingredients"
         ],
         "responses": {
           "200": {
@@ -100,7 +224,249 @@
           }
         }
       }
+    },
+    "/Registry": {
+      "post": {
+        "tags": [
+          "Registry"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FitprojectUser"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FitprojectUser"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FitprojectUser"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Registry"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
-  "components": { }
+  "components": {
+    "schemas": {
+      "FitprojectBmi": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "height": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weight": {
+            "type": "number",
+            "format": "double"
+          },
+          "bmiValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "user": {
+            "$ref": "#/components/schemas/FitprojectUser"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FitprojectCalory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "calorieCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "user": {
+            "$ref": "#/components/schemas/FitprojectUser"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FitprojectPasswordreset": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "expiryTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "emailNavigation": {
+            "$ref": "#/components/schemas/FitprojectUser"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FitprojectUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "hash": {
+            "type": "string",
+            "nullable": true
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "salt": {
+            "type": "string",
+            "nullable": true
+          },
+          "aktiv": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "jogosultsag": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "regisztracioDatum": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fitprojectBmis": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FitprojectBmi"
+            },
+            "nullable": true
+          },
+          "fitprojectCalories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FitprojectCalory"
+            },
+            "nullable": true
+          },
+          "fitprojectPasswordresets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FitprojectPasswordreset"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDTO": {
+        "type": "object",
+        "properties": {
+          "loginName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tmpHash": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
 }
