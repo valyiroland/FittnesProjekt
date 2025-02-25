@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "+3/B3Z5x52abEPzU9xvQb4qgSx+I2OyTzHwkpJZdD1o=",
+  "Hash": "qcw0sjHcNlkbSwSOmfpvXq4A19eG/FQR3yTbgNppKfM=",
   "Source": "FitprojectAPI",
   "BasePath": "_content/FitprojectAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

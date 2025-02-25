@@ -1,6 +1,6 @@
 ﻿using FitprojectAPI.Models;
 using Microsoft.AspNetCore.Mvc;
-
+using FitprojectAPI.DTOs;
 namespace FitprojectAPI.Controllers
 {
     [Route("api/[controller]")]
@@ -8,25 +8,26 @@ namespace FitprojectAPI.Controllers
     public class BmiController : ControllerBase
     {
         [HttpPost]
-        public IActionResult AddBmi(FitprojectBmi bmi)
+        public IActionResult AddBmi([FromBody] BmiDto bmiDto)
         {
             using (var context = new FitprojectContext())
             {
                 try
                 {
-                    if (bmi == null)
+                    if (bmiDto == null)
                     {
                         return StatusCode(406, "Nem érkezett adat.");
                     }
+
                     FitprojectBmi newBmi = new FitprojectBmi()
                     {
-                        UserId = bmi.UserId,
+                        UserId = bmiDto.UserId,
                         Date = DateTime.Now,
-                        Height = bmi.Height,
-                        Weight = bmi.Weight,
-                        BmiValue = bmi.BmiValue
-
+                        Height = bmiDto.Height,
+                        Weight = bmiDto.Weight,
+                        BmiValue = bmiDto.BmiValue
                     };
+
                     context.FitprojectBmis.Add(newBmi);
                     context.SaveChanges();
                     return Ok("Sikeres rögzítés.");
@@ -37,5 +38,8 @@ namespace FitprojectAPI.Controllers
                 }
             }
         }
+
+
+
     }
 }

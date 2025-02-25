@@ -8,8 +8,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "bmi",
-        "Type": "FitprojectAPI.Models.FitprojectBmi",
+        "Name": "bmiDto",
+        "Type": "FitprojectAPI.DTOs.BmiDto",
         "IsRequired": true
       }
     ],
@@ -17,15 +17,15 @@
   },
   {
     "ContainingType": "FitprojectAPI.Controllers.CalorieController",
-    "Method": "AddCal",
-    "RelativePath": "api/Calorie/AddCal",
+    "Method": "AddCalorie",
+    "RelativePath": "api/Calorie",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "calorie",
-        "Type": "FitprojectAPI.Models.FitprojectCalory",
+        "Name": "calorieDto",
+        "Type": "FitprojectAPI.DTOs.CalorieDTO",
         "IsRequired": true
       }
     ],

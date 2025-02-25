@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj": {}
+    "C:\\Users\\Béla\\Desktop\\backendfitness\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj": {
+    "C:\\Users\\Béla\\Desktop\\backendfitness\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Béla\\Desktop\\backendfitness\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj",
         "projectName": "FitprojectAPI",
-        "projectPath": "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj",
-        "packagesPath": "C:\\Users\\Iroczkib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Iroczkib\\Desktop\\fitnessbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\obj\\",
+        "projectPath": "C:\\Users\\Béla\\Desktop\\backendfitness\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj",
+        "packagesPath": "C:\\Users\\Béla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Béla\\Desktop\\backendfitness\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Iroczkib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Béla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,8 +44,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -89,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
