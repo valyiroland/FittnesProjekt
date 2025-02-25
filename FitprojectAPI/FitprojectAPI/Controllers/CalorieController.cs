@@ -1,5 +1,5 @@
-﻿using FitprojectAPI.Models;
-using Microsoft.AspNetCore.Http;
+﻿using FitprojectAPI.DTOs;
+using FitprojectAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FitprojectAPI.Controllers
@@ -8,25 +8,28 @@ namespace FitprojectAPI.Controllers
     [ApiController]
     public class CalorieController : ControllerBase
     {
-        [HttpPost("AddCal")]
-
-        public IActionResult AddCal(FitprojectCalory calorie)
+        [HttpPost]
+        public IActionResult AddCalorie([FromBody] CalorieDTO calorieDto)
         {
             using (var context = new FitprojectContext())
             {
                 try
                 {
-                    if (calorie == null)
+                    if (calorieDto == null)
                     {
                         return StatusCode(406, "Nem érkezett adat.");
                     }
-                    FitprojectCalory newcalorie = new FitprojectCalory()
+
+                    
+                    FitprojectCalory newCalorieRecord = new FitprojectCalory()
                     {
-                        UserId=calorie.UserId,
-                        Date=DateTime.Now,
-                        CalorieCount = calorie.CalorieCount
+                        UserId = calorieDto.UserId,
+                        Date = calorieDto.Date,
+                        CalorieCount = calorieDto.CalorieCount
                     };
-                    context.FitprojectCalories.Add(newcalorie);
+
+                   
+                    context.FitprojectCalories.Add(newCalorieRecord);
                     context.SaveChanges();
                     return Ok("Sikeres rögzítés.");
                 }
@@ -36,6 +39,5 @@ namespace FitprojectAPI.Controllers
                 }
             }
         }
-
     }
 }
