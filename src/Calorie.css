@@ -3,6 +3,16 @@
   background-color: #bde0fe;
   min-height: calc(100vh - 136px);
   padding: 1rem 0;
+  margin-top: 70px; /* Illeszkedjen a navbar fix pozíciójához */
+}
+
+/* 🔹 Közös konténer stílus mindkét oszlophoz */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 /* 🔹 Formázás az input mezőkhöz és select elemekhez */
@@ -20,12 +30,14 @@
   height: 35px;
 }
 
-.form-control-sm {
+.form-control-sm,
+.form-select-sm {
   height: 35px;
   border: none;
   background-color: #fff;
   border-radius: 4px;
   padding: 0.25rem 0.5rem;
+  width: 60%;
 }
 
 /* 🔹 Címkék stílusa */
@@ -33,57 +45,75 @@
   color: #374151;
   margin-bottom: 0.25rem;
   font-size: 0.875rem;
+  display: inline-block;
+  width: 150px; /* Fixed width for all labels */
+  text-align: left;
+  padding-left: 0;
 }
 
 /* 🔹 Gombok */
-.btn-primary {
-  height: 45px;
-  background-color: #0d6efd;
+.btn-primary,
+.btn-success {
+  height: 35px;
   border: none;
+  width: 60%;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
 }
 
 .btn-primary:hover {
   background-color: #0b5ed7;
 }
 
+.btn-success {
+  background-color: #198754;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+}
+
 /* 🔹 Tároló szélesség */
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* 🔹 Eredmények elrendezése */
-.results-container {
+.form-row {
   display: flex;
-  flex-direction: column; /* 🔹 Az eredmények egymás alatt jelenjenek meg */
-  gap: 10px; /* 🔹 Kis térköz a mezők között */
-  width: 100%;
-}
-
-.result-item {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-bottom: 0.5rem;
 }
 
-.result-label {
-  font-weight: bold;
-  width: 30%; /* 🔹 Azonos szélességű címkék */
+.result-value-container {
+  display: flex;
+  align-items: center;
+  width: 60%;
 }
 
 .result-input {
-  width: 65%;
-  text-align: right;
+  flex: 1;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #f8f9fa;
+  height: 35px;
+}
+
+.result-checkbox {
+  margin-left: 10px;
 }
 
 /* 🔹 Reszponzivitás mobil nézethez */
 @media (max-width: 768px) {
   .calculator-bg {
     min-height: calc(100vh - 120px);
+    padding: 1rem 0;
   }
 
   .container {
@@ -91,18 +121,30 @@
     padding-bottom: 1rem;
   }
 
-  .result-item {
-    flex-direction: column; /* 🔹 Mobilon az eredmények egymás alatt jelenjenek meg */
+  .form-row {
+    flex-direction: column;
     align-items: flex-start;
   }
 
-  .result-label {
+  .form-label {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-control-sm,
+  .form-select-sm,
+  .btn-primary,
+  .btn-success {
+    width: 100%;
+  }
+
+  .result-value-container {
     width: 100%;
   }
 
   .result-input {
     width: 100%;
-    text-align: left;
   }
 }
 
@@ -121,48 +163,30 @@
   z-index: 1030;
 }
 
-.calculator-bg {
-  margin-top: 70px; /* Illeszkedjen a navbar fix pozíciójához */
-}
-
-h1 {
+h1,
+h2 {
   margin-top: 0;
-  padding-top: 10px; /* Ha szükséges, finomhangold */
+  padding-top: 10px;
   text-align: center;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1200px;
+/* Ensure exact alignment */
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.calculator-bg {
-  padding: 20px 15px;
-  min-height: 100vh; /* Biztosítja, hogy a teljes képernyőt lefedje */
+/* Message styling */
+.message {
+  margin-top: 0.5rem;
+  text-align: center;
 }
 
-@media (max-width: 767px) {
-  .calculator-bg {
-    padding: 1rem 0;
-  }
+.text-success {
+  color: #198754;
+}
 
-  .form-control-sm,
-  .form-select-sm,
-  .btn {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-
-  .result-item {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-  }
-
-  .result-label,
-  .result-input {
-    width: 100%;
-  }
+.text-danger {
+  color: #dc3545;
 }
 
