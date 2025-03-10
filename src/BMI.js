@@ -16,7 +16,7 @@ export default function BMI() {
       try {
         const storedUser = localStorage.getItem("user");
         if (!storedUser) {
-          console.error("❌ Nincs bejelentkezett felhasználó!");
+          console.error("❌ There is no logged-in user!");
           return;
         }
 
@@ -24,7 +24,7 @@ export default function BMI() {
         const token = userData.token; // 🔹 Token kinyerése
 
         if (!token) {
-          console.error("❌ Nincs token a felhasználói adatokban!");
+          console.error("❌ There is no token in the user data!");
           return;
         }
 
@@ -33,10 +33,10 @@ export default function BMI() {
         if (response.data && response.data.id) {
           setUserId(response.data.id);
         } else {
-          console.error("❌ Nem sikerült lekérni a felhasználói adatokat.");
+          console.error("❌ Failed to retrieve user data.");
         }
       } catch (error) {
-        console.error("❌ Hiba történt a felhasználó adatainak lekérésekor:", error);
+        console.error("❌ An error occurred while retrieving user data:", error);
       }
     };
 
@@ -44,11 +44,6 @@ export default function BMI() {
   }, []);
 
   const calculateBMI = async () => {
-    if (!userId) {
-      setResponseMessage("⚠️ Hiba: Nincs bejelentkezett felhasználó!");
-      return;
-    }
-
     if (height > 0 && weight > 0) {
       const heightInMeters = height / 100;
       const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
@@ -64,18 +59,24 @@ export default function BMI() {
         setCategory("Obesity");
       }
 
+      // 🔹 Ha nincs bejelentkezett felhasználó, ne mentse el az adatokat
+      if (!userId) {
+        setResponseMessage("⚠️ Not logged in: BMI not saved, but calculated.");
+        return;
+      }
+
       try {
         const bmiData = {
-          userId: userId, // 🔹 Bejelentkezett user ID
+          userId: userId,
           height: parseInt(height, 10),
           weight: parseFloat(weight),
-          bmiValue: parseFloat(bmi)
+          bmiValue: parseFloat(bmi),
         };
 
         console.log("📤 Küldött adatok:", bmiData);
 
         const response = await axios.post('http://localhost:5071/api/Bmi', bmiData, {
-          headers: { 'Content-Type': 'application/json' }
+          headers: { 'Content-Type': 'application/json' },
         });
 
         console.log('✅ BMI data saved successfully', response.data);
@@ -174,4 +175,4 @@ export default function BMI() {
       </div>
     </main>
   );
-} 
+}
