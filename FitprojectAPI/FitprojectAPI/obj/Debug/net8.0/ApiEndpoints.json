@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "FitprojectAPI.Controllers.BmiController",
-    "Method": "AddBmi",
+    "Method": "AddOrUpdateBmi",
     "RelativePath": "api/Bmi",
     "HttpMethod": "POST",
     "IsController": true,

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D0p4+adpMRE=",
+  "dgSpecHash": "RgQPsjkYFOU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Béla\\Desktop\\backendfitness\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj",
+  "projectFilePath": "C:\\Users\\Béla\\Desktop\\ujbackend\\FittnesProjekt\\FitprojectAPI\\FitprojectAPI\\FitprojectAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Béla\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\Béla\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",
