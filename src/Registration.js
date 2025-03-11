@@ -56,7 +56,7 @@ const RegistryForm = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:5071/Registry", user, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/Registry`, user, {
         headers: { "Content-Type": "application/json" },
       });
 

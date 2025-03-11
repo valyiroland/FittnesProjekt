@@ -7,6 +7,7 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false); // Jelszó láthatóságának állapota
   const navigate = useNavigate();
 
@@ -35,7 +36,7 @@ const Login = () => {
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 
-      const loginResponse = await axios.post("http://localhost:5071/api/Login", {
+      const loginResponse = await axios.post(`${process.env.REACT_APP_API_URL}/api/Login`, {
         LoginName: username,
         TmpHash: hashHex,
       });
@@ -44,9 +45,14 @@ const Login = () => {
       localStorage.setItem("user", JSON.stringify(userData));
 
       setError("");
-      alert("Successful login!");
-      navigate("/", { replace: true });
-      window.location.reload();
+      
+      setSuccessMessage("Successful login!");
+      setTimeout(() => {
+        
+        navigate("/", { replace: true });
+        window.location.reload();
+      }, 1000);
+      
     } catch (err) {
       setError(err.response?.data || "There was an error during the login.");
     }
@@ -99,6 +105,7 @@ const Login = () => {
             Login
           </button>
         </form>
+        {successMessage && <p className="success-message">{successMessage}</p>}
         <p className="auth-link">
           <Link to="/Email" style={{ color: "red" }}>Forgot your password?</Link>
         </p>

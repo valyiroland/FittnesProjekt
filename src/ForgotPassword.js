@@ -28,7 +28,7 @@ export default function ForgotPassword() {
     }
   
     // Az URL-be illesztjük a token-t és a newPassword-ot
-    const url = `http://localhost:5071/api/ForgotPassword/NewPassword?token=${token}&newPassword=${password}`;
+    const url = `${process.env.REACT_APP_API_URL}/api/ForgotPassword/NewPassword?token=${token}&newPassword=${password}`;
   
     try {
       const response = await fetch(url, {

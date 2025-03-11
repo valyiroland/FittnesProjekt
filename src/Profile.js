@@ -19,7 +19,7 @@ const Profile = () => {
     console.log("Using token:", user.token)
 
     axios
-      .get(`http://localhost:5071/api/User/?token=${user.token}`)
+      .get(`${process.env.REACT_APP_API_URL}/api/User/?token=${user.token}`)
       .then((response) => {
         console.log("API response:", response.data)
         setUserData(response.data)

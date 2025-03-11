@@ -27,7 +27,7 @@ export default function Navbar() {
       console.log(token)
       if (!token) return;
 
-      await axios.post(`http://localhost:5071/api/LogOut?uId=${token}`);
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/LogOut?uId=${token}`);
 
       localStorage.removeItem("user"); // 🔹 Felhasználói adatok törlése
       localStorage.removeItem("token"); // 🔹 Token törlése

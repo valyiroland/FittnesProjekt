@@ -21,11 +21,11 @@ export default function Diet() {
         };
 
         // Hozzávalók lekérése
-        const foodResponse = await axios.get(`http://localhost:5071/Ingredients/category/${categoryIdMap[selectedCategory]}`);
+        const foodResponse = await axios.get(`${process.env.REACT_APP_API_URL}/Ingredients/category/${categoryIdMap[selectedCategory]}`);
         setFoods(foodResponse.data);
 
         // Receptek lekérése
-        const recipeResponse = await axios.get('http://localhost:5071/Recipes/Recipes');
+        const recipeResponse = await axios.get(`${process.env.REACT_APP_API_URL}/Recipes/Recipes`);
         setRecipes(recipeResponse.data);
 
       } catch (error) {

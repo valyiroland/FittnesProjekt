@@ -28,7 +28,7 @@ export default function BMI() {
           return;
         }
 
-        const response = await axios.get(`http://localhost:5071/api/User?token=${token}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/User?token=${token}`);
 
         if (response.data && response.data.id) {
           setUserId(response.data.id);
@@ -75,7 +75,7 @@ export default function BMI() {
 
         console.log("📤 Küldött adatok:", bmiData);
 
-        const response = await axios.post('http://localhost:5071/api/Bmi', bmiData, {
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/Bmi`, bmiData, {
           headers: { 'Content-Type': 'application/json' },
         });
 

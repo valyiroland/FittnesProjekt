@@ -1,4 +1,4 @@
-"use client"
+
 
 import { useState, useEffect } from "react"
 import "./Calorie.css"
@@ -27,7 +27,7 @@ export default function Calorie() {
 
     if (user && user.token) {
       axios
-        .get(`http://localhost:5071/api/User/?token=${user.token}`)
+        .get(`${process.env.REACT_APP_API_URL}/api/User/?token=${user.token}`)
         .then((response) => {
           console.log("User Data:", response.data)
           setUserId(response.data.id)
@@ -88,7 +88,7 @@ export default function Calorie() {
     console.log("Sending data:", data)
 
     axios
-      .post("http://localhost:5071/api/Calorie/", data)
+      .post(`${process.env.REACT_APP_API_URL}/api/Calorie/`, data)
       .then((response) => {
         setMessage("Calorie successfully saved!")
       })

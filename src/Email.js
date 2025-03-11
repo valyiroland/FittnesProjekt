@@ -16,7 +16,7 @@ export default function Email() {
     }
 
     // Az URL-t dinamikusan építjük fel az email paraméterrel
-    const url = `http://localhost:5071/api/ForgotPassword?email=${encodeURIComponent(email)}`;
+    const url = `${process.env.REACT_APP_API_URL}/api/ForgotPassword?email=${encodeURIComponent(email)}`;
 
     try {
       const response = await fetch(url, {
