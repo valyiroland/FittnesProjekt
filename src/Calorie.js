@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react"
 import "./Calorie.css"
 import axios from "axios"
