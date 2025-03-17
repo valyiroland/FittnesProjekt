@@ -1,4 +1,3 @@
-
 import './App.css';
 import Footer from './Footer';
 import Navbar from './Navbar';
@@ -14,40 +13,35 @@ import { useEffect } from 'react';
 import Email from './Email';
 import ForgotPassword from './ForgotPassword';
 import Profile from './Profile';
-
+import CheckURL from './CheckURL'; 
 
 function App() {
   const location = useLocation();
   let activepage = "";
   switch (location.pathname) {
     case "/Diet":
-      
-  activepage = "Diet"
+      activepage = "Diet"
       break;
-
     case "/BMI":
       activepage = "BMI"
-    
       break;
-      case "/Calorie":
-        activepage = "Calorie"
-        break;
-        case "/Login":
-          activepage = "Login"
-          break;
-          case "/Registration":
-          activepage = "Registration"
-          break;
-      default:
-        activepage="Home"
-        break;
-      
+    case "/Calorie":
+      activepage = "Calorie"
+      break;
+    case "/Login":
+      activepage = "Login"
+      break;
+    case "/Registration":
+      activepage = "Registration"
+      break;
+    default:
+      activepage="Home"
+      break;
   }
+  
   useEffect(() => {
     document.title=`${activepage} | FitForm`
-  
-    }
-  , [activepage])
+  }, [activepage])
   
   return (
     <div className="App">
@@ -55,7 +49,12 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/Calorie' element={<Calorie/>}/>
-          <Route path='/Diet' element={<Diet/>}/>
+          {/* Védett útvonal a Diet oldalhoz */}
+          <Route path='/Diet' element={
+            <CheckURL>
+              <Diet/>
+            </CheckURL>
+          }/>
           <Route path='/BMI' element={<BMI/>}/>
           <Route path='/Login' element={<Login/>}/>
           <Route path='/Registration' element={<Registration/>}/>

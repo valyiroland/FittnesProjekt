@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faInfoCircle, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
@@ -62,7 +62,16 @@ export default function Navbar() {
                 <Link className="nav-link text-dark" to="/Calorie">Calorie</Link>
             </li>
             <li className="nav-item">
+              {username ? (
                 <Link className="nav-link text-dark" to="/Diet">Diet</Link>
+              ) : (
+                <span className="nav-link text-muted" style={{ 
+                  cursor: 'not-allowed', 
+                  opacity: 0.5 
+                }}>
+                  Diet
+                </span>
+              )}
             </li>
           </ul>
           <div className="user-icons">
@@ -88,4 +97,3 @@ export default function Navbar() {
    
   );
 }
-
