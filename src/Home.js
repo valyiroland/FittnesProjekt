@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalculator, faWeight, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import './Home.css';
+import { Link } from "react-router-dom";
 // HeroSection memoizálása, hogy ne renderelődjön újra feleslegesen
 const HeroSection = React.memo(() => {
   return (
@@ -46,15 +47,17 @@ export default function Home() {
                 onMouseEnter={() => setHoveredCard(1)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
-                <div className="card-body">
+                <Link className="card-body" to="/Calorie">
+                
                   <div className="mb-3">
                     <FontAwesomeIcon icon={faCalculator} className="text-primary fa-2x" />
                   </div>
                   <h5 className="card-title fw-bold">Calorie Goal Calculator</h5>
+                  
                   <p className="card-text text-muted">
                     Calculate your recommended daily calorie intake based on your fitness goals.
                   </p>
-                </div>
+                </Link>
               </div>
             </div>
             {/* BMI Calculator */}
@@ -65,7 +68,7 @@ export default function Home() {
                 onMouseEnter={() => setHoveredCard(2)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
-                <div className="card-body">
+                <Link className="card-body" to="/BMI">
                   <div className="mb-3">
                     <FontAwesomeIcon icon={faWeight} className="text-success fa-2x" />
                   </div>
@@ -73,7 +76,7 @@ export default function Home() {
                   <p className="card-text text-muted">
                     Calculate and monitor your Body Mass Index for better health insights.
                   </p>
-                </div>
+                </Link>
               </div>
             </div>
             {/* Diet Plans */}
@@ -84,7 +87,7 @@ export default function Home() {
                 onMouseEnter={() => setHoveredCard(3)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
-                <div className="card-body">
+                <Link className="card-body" to="/Diet">
                   <div className="mb-3">
                     <FontAwesomeIcon icon={faUtensils} className="text-danger fa-2x" />
                   </div>
@@ -92,7 +95,7 @@ export default function Home() {
                   <p className="card-text text-muted">
                     Access a variety of diet plans to support your fitness journey.
                   </p>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
