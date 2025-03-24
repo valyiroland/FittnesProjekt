@@ -22,10 +22,6 @@ body {
   flex-shrink: 0;
 }
 
-html{
-  scrollbar-gutter: stable;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
