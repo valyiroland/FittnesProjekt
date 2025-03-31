@@ -1,0 +1,213 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|c:\\users\\vroli\\onedrive\\asztali g\u00E9p\\fitformadminapp\\fitformadminapp\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|solutionrelative:fitformadminapp\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|c:\\users\\vroli\\onedrive\\asztali g\u00E9p\\fitformadminapp\\fitformadminapp\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|solutionrelative:fitformadminapp\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|c:\\users\\vroli\\onedrive\\asztali g\u00E9p\\fitformadminapp\\fitformadminapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|solutionrelative:fitformadminapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|c:\\users\\vroli\\onedrive\\asztali g\u00E9p\\fitformadminapp\\fitformadminapp\\userput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|solutionrelative:fitformadminapp\\userput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|c:\\users\\vroli\\onedrive\\asztali g\u00E9p\\fitformadminapp\\fitformadminapp\\userput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|solutionrelative:fitformadminapp\\userput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|c:\\users\\vroli\\onedrive\\asztali g\u00E9p\\fitformadminapp\\fitformadminapp\\userpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|solutionrelative:fitformadminapp\\userpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|c:\\users\\vroli\\onedrive\\asztali g\u00E9p\\fitformadminapp\\fitformadminapp\\userpost.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|solutionrelative:fitformadminapp\\userpost.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|c:\\users\\vroli\\onedrive\\asztali g\u00E9p\\fitformadminapp\\fitformadminapp\\userdelete.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|solutionrelative:fitformadminapp\\userdelete.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|c:\\users\\vroli\\onedrive\\asztali g\u00E9p\\fitformadminapp\\fitformadminapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|solutionrelative:fitformadminapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|c:\\users\\vroli\\onedrive\\asztali g\u00E9p\\fitformadminapp\\fitformadminapp\\userdelete.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5A5CBCA4-8F49-44BA-AAD6-E8E781144255}|FitformAdminApp\\FitformAdminApp.csproj|solutionrelative:fitformadminapp\\userdelete.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 16,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserPut.xaml",
+              "DocumentMoniker": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\UserPut.xaml",
+              "RelativeDocumentMoniker": "FitformAdminApp\\UserPut.xaml",
+              "ToolTip": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\UserPut.xaml",
+              "RelativeToolTip": "FitformAdminApp\\UserPut.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-31T16:28:16.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\AdminWindow.xaml.cs",
+              "RelativeDocumentMoniker": "FitformAdminApp\\AdminWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\AdminWindow.xaml.cs*",
+              "RelativeToolTip": "FitformAdminApp\\AdminWindow.xaml.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T10:03:38.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserDelete.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\UserDelete.xaml.cs",
+              "RelativeDocumentMoniker": "FitformAdminApp\\UserDelete.xaml.cs",
+              "ToolTip": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\UserDelete.xaml.cs",
+              "RelativeToolTip": "FitformAdminApp\\UserDelete.xaml.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAGUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T17:24:41.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserPut.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\UserPut.xaml.cs",
+              "RelativeDocumentMoniker": "FitformAdminApp\\UserPut.xaml.cs",
+              "ToolTip": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\UserPut.xaml.cs",
+              "RelativeToolTip": "FitformAdminApp\\UserPut.xaml.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAFkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T16:19:44.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "FitformAdminApp\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "FitformAdminApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAhwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T09:01:07.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserPost.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\UserPost.xaml.cs",
+              "RelativeDocumentMoniker": "FitformAdminApp\\UserPost.xaml.cs",
+              "ToolTip": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\UserPost.xaml.cs",
+              "RelativeToolTip": "FitformAdminApp\\UserPost.xaml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAhwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T10:05:21.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserPost.xaml",
+              "DocumentMoniker": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\UserPost.xaml",
+              "RelativeDocumentMoniker": "FitformAdminApp\\UserPost.xaml",
+              "ToolTip": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\UserPost.xaml",
+              "RelativeToolTip": "FitformAdminApp\\UserPost.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-31T10:11:10.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "FitformAdminApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\MainWindow.xaml",
+              "RelativeToolTip": "FitformAdminApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-31T09:01:11.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserDelete.xaml",
+              "DocumentMoniker": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\UserDelete.xaml",
+              "RelativeDocumentMoniker": "FitformAdminApp\\UserDelete.xaml",
+              "ToolTip": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\UserDelete.xaml",
+              "RelativeToolTip": "FitformAdminApp\\UserDelete.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-31T17:24:42.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\AdminWindow.xaml",
+              "RelativeDocumentMoniker": "FitformAdminApp\\AdminWindow.xaml",
+              "ToolTip": "C:\\Users\\vroli\\OneDrive\\Asztali g\u00E9p\\FitformAdminApp\\FitformAdminApp\\AdminWindow.xaml",
+              "RelativeToolTip": "FitformAdminApp\\AdminWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-31T09:56:49.878Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
