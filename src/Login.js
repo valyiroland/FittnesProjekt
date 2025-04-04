@@ -11,11 +11,13 @@ const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false); // Jelszó láthatóságának állapota
   const navigate = useNavigate();
 
+  // A jelszó validálására szolgáló függvény
   const validatePassword = (password) => {
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
     return passwordRegex.test(password);
   };
 
+  // Bejelentkezési folyamat kezelése
   const handleLogin = async (e) => {
     e.preventDefault();
 
