@@ -10,7 +10,7 @@ export default function BMI() {
   const [category, setCategory] = useState("");
   const [responseMessage, setResponseMessage] = useState("");  
 
-  // 🔹 Bejelentkezett felhasználó ID lekérése
+  // Bejelentkezett felhasználó ID lekérése
   useEffect(() => {
     const fetchUserId = async () => {
       try {
@@ -20,8 +20,8 @@ export default function BMI() {
           return;
         }
 
-        const userData = JSON.parse(storedUser); // 🔹 JSON parse
-        const token = userData.token; // 🔹 Token kinyerése
+        const userData = JSON.parse(storedUser); 
+        const token = userData.token; 
 
         if (!token) {
           console.error("❌ There is no token in the user data!");
@@ -43,6 +43,7 @@ export default function BMI() {
     fetchUserId();
   }, []);
 
+  // Aszinkron függvény, ami a BMI kiszámítását végzi
   const calculateBMI = async () => {
     if (height > 0 && weight > 0) {
       const heightInMeters = height / 100;
@@ -59,7 +60,7 @@ export default function BMI() {
         setCategory("Obesity");
       }
 
-      // 🔹 Ha nincs bejelentkezett felhasználó, ne mentse el az adatokat
+      
       if (!userId) {
         setResponseMessage("⚠️ Not logged in: BMI not saved, but calculated.");
         return;
@@ -75,6 +76,7 @@ export default function BMI() {
 
         console.log("📤 Küldött adatok:", bmiData);
 
+        // Aszinkron kérés küldése a szervernek a BMI adatainkkal
         const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/Bmi`, bmiData, {
           headers: { 'Content-Type': 'application/json' },
         });
@@ -91,6 +93,8 @@ export default function BMI() {
     }
   };
 
+
+  // A felhasználói űrlap mezőinek törlésére szolgáló függvény
   const clearFields = () => {
     setHeight("");
     setWeight("");
