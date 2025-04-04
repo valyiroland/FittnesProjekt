@@ -15,21 +15,23 @@ const RegistryForm = () => {
   const [passwordVisible, setPasswordVisible] = useState(false); // Jelszó láthatóságának állapota
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false); // A megerősítő jelszó láthatósága
 
-  // 🔹 Véletlenszerű 16 bájtos só generálása
+  // Véletlenszerű 16 bájtos só generálása
   const generateSalt = () => {
     return CryptoJS.lib.WordArray.random(16).toString();
   };
 
-  // 🔹 Jelszó és só hash-elése SHA-256-tal
+  // Jelszó és só hash-elése SHA-256-tal
   const hashPassword = (password, salt) => {
     return CryptoJS.SHA256(password + salt).toString();
   };
 
-  // 🔹 Jelszó validálása: legalább 6 karakter, egy nagy betű és egy szám
+  // Jelszó validálása: legalább 6 karakter, egy nagy betű és egy szám
   const validatePassword = (password) => {
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
     return passwordRegex.test(password);
   };
+
+  // A regisztrációs űrlap elküldését kezelő aszinkron függvény
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,14 +46,14 @@ const RegistryForm = () => {
       return;
     }
 
-    const salt = generateSalt(); // Generálunk egy véletlenszerű sót
-    const hashedPassword = hashPassword(password, salt); // Jelszót hash-elünk a sóval együtt
+    const salt = generateSalt(); 
+    const hashedPassword = hashPassword(password, salt); 
 
     const user = {
       Name: username,
       Email: email,
-      Hash: hashedPassword, // Hashelt jelszó
-      Salt: salt, // Só elküldése
+      Hash: hashedPassword, 
+      Salt: salt,
       Gender: gender,
     };
 
@@ -120,7 +122,7 @@ const RegistryForm = () => {
             <label htmlFor="password">Password</label>
             <div className="password-container">
               <input
-                type={passwordVisible ? "text" : "password"} // A jelszó típusának váltása
+                type={passwordVisible ? "text" : "password"} 
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -130,7 +132,7 @@ const RegistryForm = () => {
               <button
                 type="button"
                 className="toggle-password"
-                onClick={() => setPasswordVisible(!passwordVisible)} // A jelszó láthatóságának váltása
+                onClick={() => setPasswordVisible(!passwordVisible)} 
               >
                 {passwordVisible ? <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
   <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
@@ -146,7 +148,7 @@ const RegistryForm = () => {
             <label htmlFor="confirmPassword">Confirm Password</label>
             <div className="password-container">
               <input
-                type={confirmPasswordVisible ? "text" : "password"} // A megerősítő jelszó típusának váltása
+                type={confirmPasswordVisible ? "text" : "password"} 
                 id="confirmPassword"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
@@ -156,7 +158,7 @@ const RegistryForm = () => {
               <button
                 type="button"
                 className="toggle-password"
-                onClick={() => setConfirmPasswordVisible(!confirmPasswordVisible)} // A megerősítő jelszó láthatóságának váltása
+                onClick={() => setConfirmPasswordVisible(!confirmPasswordVisible)} 
               >
                 {confirmPasswordVisible ? <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
   <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
