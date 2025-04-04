@@ -133,6 +133,54 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FitprojectAPI.Controllers.UserController",
+    "Method": "PostUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "FitprojectAPI.Models.FitprojectUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.UserController",
+    "Method": "DeleteUserData",
+    "RelativePath": "api/User/DeleteUserData",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
     "Method": "GetByCategory",
     "RelativePath": "Ingredients/category/{categoryId}",
@@ -143,6 +191,22 @@
       {
         "Name": "categoryId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitprojectAPI.Controllers.IngredientsController",
+    "Method": "PostR",
+    "RelativePath": "Ingredients/newIngredients",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newingredient",
+        "Type": "FitprojectAPI.Models.FitprojectIngredient",
         "IsRequired": true
       }
     ],

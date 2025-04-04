@@ -100,5 +100,45 @@ namespace FitprojectAPI.Controllers
                 }
             }
         }
+
+        [HttpPost]
+        public IActionResult PostUser(FitprojectUser user)
+        {
+            using(var context = new FitprojectContext())
+            {
+                try
+                {
+                    context.FitprojectUsers.Add(user);
+                    context.SaveChanges();
+                    return Ok("Sikeres rögzítés");
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex.Message);
+                }
+            }
+        }
+
+        [HttpDelete]
+        public IActionResult DeleteUser(int id)
+        {
+            using (var context = new FitprojectContext())
+            {
+                try
+                {
+                    FitprojectUser torlendo = new FitprojectUser()
+                    {
+                        Id = id
+                    };
+                    context.FitprojectUsers.Remove(torlendo);
+                    context.SaveChanges();
+                    return Ok("Sikeres törlés");
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex.Message);
+                }
+            }
+        }
     }
 }
