@@ -17,7 +17,7 @@ public partial class FitprojectIngredient
 
     public string? ImageUrl { get; set; }
 
-    public virtual FitprojectCategory Category { get; set; } = null!;
-
+    public virtual FitprojectCategory? Category { get; set; } = null!;
+    [JsonIgnore]
     public virtual ICollection<FitprojectRecipeIngredient> FitprojectRecipeIngredients { get; set; } = new List<FitprojectRecipeIngredient>();
 }

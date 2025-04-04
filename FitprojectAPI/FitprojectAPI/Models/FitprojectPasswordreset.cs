@@ -11,7 +11,7 @@ public partial class FitprojectPasswordreset
 
     public string Token { get; set; } = null!;
 
-    public DateTime ExpiryTime { get; set; }
-
+    public DateTime? ExpiryTime { get; set; }
+    [JsonIgnore]
     public virtual FitprojectUser EmailNavigation { get; set; } = null!;
 }

@@ -13,5 +13,5 @@ public partial class FitprojectCalory
 
     public int CalorieCount { get; set; }
 
-    public virtual FitprojectUser User { get; set; } = null!;
+    public virtual FitprojectUser? User { get; set; } = null!;
 }

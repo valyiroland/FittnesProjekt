@@ -17,5 +17,5 @@ public partial class FitprojectBmi
 
     public DateTime Date { get; set; }
 
-    public virtual FitprojectUser User { get; set; } = null!;
+    public virtual FitprojectUser? User { get; set; } = null!;
 }

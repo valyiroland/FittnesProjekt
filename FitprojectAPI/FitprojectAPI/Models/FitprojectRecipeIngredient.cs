@@ -10,8 +10,8 @@ public partial class FitprojectRecipeIngredient
     public int IngredientId { get; set; }
 
     public decimal Amount { get; set; }
+    
+    public virtual FitprojectIngredient? Ingredient { get; set; } = null!;
 
-    public virtual FitprojectIngredient Ingredient { get; set; } = null!;
-
-    public virtual FitprojectRecipe Recipe { get; set; } = null!;
+    public virtual FitprojectRecipe? Recipe { get; set; } = null!;
 }
