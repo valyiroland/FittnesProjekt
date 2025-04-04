@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace FitprojectAPI.Controllers
 {
@@ -77,19 +79,19 @@ namespace FitprojectAPI.Controllers
                         return NotFound("Felhasználó nem található.");
                     }
 
-                    
+
                     if (user.FitprojectBmis != null && user.FitprojectBmis.Any())
                     {
                         context.FitprojectBmis.RemoveRange(user.FitprojectBmis);
                     }
 
-                 
+
                     if (user.FitprojectCalories != null && user.FitprojectCalories.Any())
                     {
                         context.FitprojectCalories.RemoveRange(user.FitprojectCalories);
                     }
 
-                    
+
                     context.SaveChanges();
 
                     return Ok("Felhasználói adatok sikeresen törölve.");
@@ -101,38 +103,52 @@ namespace FitprojectAPI.Controllers
             }
         }
 
-        [HttpPost]
-        public IActionResult PostUser(FitprojectUser user)
+        [HttpGet("User")]
+        public IActionResult Get()
         {
-            using(var context = new FitprojectContext())
+
+
+
+            using (var context = new FitprojectContext())
             {
+
                 try
                 {
-                    context.FitprojectUsers.Add(user);
-                    context.SaveChanges();
-                    return Ok("Sikeres rögzítés");
+                    return Ok(context.FitprojectUsers.ToList());
+
                 }
                 catch (Exception ex)
                 {
+
                     return BadRequest(ex.Message);
                 }
+
+
+
             }
+
+
+
         }
 
-        [HttpDelete]
+        [HttpDelete("Delete")]
         public IActionResult DeleteUser(int id)
         {
             using (var context = new FitprojectContext())
             {
                 try
                 {
-                    FitprojectUser torlendo = new FitprojectUser()
+                    FitprojectUser result = context.FitprojectUsers.Find(id);
+                    if (result == null)
                     {
-                        Id = id
-                    };
-                    context.FitprojectUsers.Remove(torlendo);
-                    context.SaveChanges();
-                    return Ok("Sikeres törlés");
+                        return StatusCode(404, "Nem található a termék");
+                    }
+                    else
+                    {
+                        context.FitprojectUsers.Remove(result);
+                        context.SaveChanges();
+                        return Ok("Sikeres törlés");
+                    }
                 }
                 catch (Exception ex)
                 {
