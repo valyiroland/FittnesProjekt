@@ -3,13 +3,21 @@ import axios from 'axios';
 import './Diet.css';
 
 export default function Diet() {
+  // Kiválasztott kategória állapota (alapértelmezetten "Vegetables")
   const [selectedCategory, setSelectedCategory] = useState("Vegetables");
+
+  // Hozzávalók listájának állapota
   const [foods, setFoods] = useState([]);
+
+  // Receptek listájának állapota
   const [recipes, setRecipes] = useState([]);
 
+  // Ez a hook akkor fut le, amikor a `selectedCategory` értéke megváltozik
   useEffect(() => {
+    // Adatok lekérő függvénye (aszinkron módon)
     const fetchData = async () => {
       try {
+        // Kategórianévhez tartozó azonosítók
         const categoryIdMap = {
           "Vegetables": 1,
           "Fruits": 2,
@@ -20,31 +28,35 @@ export default function Diet() {
           "Others": 7,
         };
 
-        // Hozzávalók lekérése
+        // Hozzávalók lekérése az API-ból a kiválasztott kategória alapján
         const foodResponse = await axios.get(`${process.env.REACT_APP_API_URL}/Ingredients/category/${categoryIdMap[selectedCategory]}`);
-        setFoods(foodResponse.data);
+        setFoods(foodResponse.data); // Lekért hozzávalók állapotba mentése
 
-        // Receptek lekérése
+        // Receptek lekérése az API-ból
         const recipeResponse = await axios.get(`${process.env.REACT_APP_API_URL}/Recipes/Recipes`);
-        setRecipes(recipeResponse.data);
+        setRecipes(recipeResponse.data); // Lekért receptek állapotba mentése
 
       } catch (error) {
-        console.error("Error fetching data", error);
+        console.error("Hiba történt az adatok lekérésekor", error);
       }
     };
 
+    // Adatlekérő függvény meghívása
     fetchData();
-  }, [selectedCategory]); 
+  }, [selectedCategory]); // Hook újrafut, ha megváltozik a kiválasztott kategória
 
   return (
     <div className="container mt-5 pt-5 pb-5">
       <h1 className="text-center mb-4">Nutritional Guide</h1>
+
+      {/* Kategóriaválasztó legördülő lista */}
       <div className="d-flex justify-content-center mb-4">
         <select
           value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
+          onChange={(e) => setSelectedCategory(e.target.value)} // Kiválasztott kategória frissítése
           className="form-select border-dark w-auto text-center"
         >
+          {/* Elérhető kategóriák megjelenítése */}
           {["Vegetables", "Fruits", "Meats and fishes", "Pasta and Breads", "Nuts and Legumes", "Dairy", "Others"].map((category) => (
               <option key={category} value={category}>
                 {category}
@@ -53,6 +65,7 @@ export default function Diet() {
         </select>
       </div>
 
+      {/* Hozzávalók kártyák formájában történő megjelenítése */}
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 mb-5">
         {foods &&
           foods.map((food, index) => (
@@ -71,6 +84,7 @@ export default function Diet() {
           ))}
       </div>
 
+      {/* Receptek megjelenítése */}
       <h2 className="font-weight-bold mb-4 text-center">Recipes</h2>
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
         {recipes &&
@@ -83,6 +97,7 @@ export default function Diet() {
                   <div>
                     <p className="font-weight-bold mb-2">Ingredients:</p>
                     <ul className="list-unstyled">
+                      {/* Hozzávalók listázása vagy hibaüzenet ha nincs */}
                       {recipe.ingredients && Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0 ? (
                         recipe.ingredients.map((ingredient, idx) => <li key={ingredient + idx}>{ingredient}</li>)
                       ) : (
@@ -98,4 +113,3 @@ export default function Diet() {
     </div>
   );
 }
-

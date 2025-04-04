@@ -3,27 +3,40 @@ import "./Calorie.css"
 import axios from "axios"
 
 export default function Calorie() {
+  // Állapotok az űrlap mezőkhöz
   const [weight, setWeight] = useState("")
   const [height, setHeight] = useState("")
   const [age, setAge] = useState("")
   const [gender, setGender] = useState("male")
   const [activityLevel, setActivityLevel] = useState(1.55)
   const [weightLossGoal, setWeightLossGoal] = useState(0.5)
+
+  // Kalkulált kalóriaértékek (karbantartás, fogyás, tömegnövelés, BMR)
   const [calories, setCalories] = useState({
     maintenance: "",
     weightLoss: "",
     bulk: "",
     bmr: "",
   })
+
+  // Kiválasztott kalória érték mentéshez
   const [selectedCalorie, setSelectedCalorie] = useState(null)
+
+  // Üzenetek megjelenítéséhez (siker/hiba)
   const [message, setMessage] = useState("")
+
+  // Be van-e jelentkezve a felhasználó
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  // Felhasználó azonosítója
   const [userId, setUserId] = useState(null)
 
+  // Oldal betöltésekor ellenőrizzük, hogy be van-e jelentkezve, és betöltjük az alap adatokat
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"))
 
     if (user && user.token) {
+      // Lekérjük a felhasználó adatait token alapján
       axios
         .get(`${process.env.REACT_APP_API_URL}/api/User/?token=${user.token}`)
         .then((response) => {
@@ -45,6 +58,7 @@ export default function Calorie() {
     }
   }, [])
 
+  // BMR (alapanyagcsere) számítása Mifflin-St Jeor képlet alapján
   const calculateBMR = () => {
     if (gender === "male") {
       return 88.36 + 13.4 * Number(weight) + 4.8 * Number(height) - 5.7 * Number(age)
@@ -53,10 +67,11 @@ export default function Calorie() {
     }
   }
 
+  // Kalóriaigények kiszámítása aktivitás és cél alapján
   const calculateCalories = () => {
     const bmr = calculateBMR()
     const maintenanceCalories = bmr * activityLevel
-    const deficit = weightLossGoal * 1000
+    const deficit = weightLossGoal * 1000 // kb. 1000 kcal = 1 kg/hét
 
     setCalories({
       maintenance: Math.round(maintenanceCalories),
@@ -66,6 +81,7 @@ export default function Calorie() {
     })
   }
 
+  // Kiválasztott kalória érték mentése adatbázisba
   const saveCalorie = () => {
     if (!isLoggedIn) {
       setMessage("Please log in to save your calorie count.")
@@ -80,7 +96,7 @@ export default function Calorie() {
     const data = {
       UserId: userId,
       CalorieCount: selectedCalorie,
-      Date: new Date().toISOString(),
+      Date: new Date().toISOString(), // mentés időpontja
     }
 
     console.log("Sending data:", data)
@@ -96,17 +112,19 @@ export default function Calorie() {
       })
   }
 
+  // JSX visszatérés: űrlap baloldalt, eredmények jobboldalt
   return (
     <div className="calculator-bg">
       <div className="container py-4 px-3 px-md-4">
         <h1 className="mb-4 t-30">Calorie Calculator</h1>
 
         <div className="row">
-          {/* Input Column */}
+          {/* Bemeneti mezők (testsúly, magasság, stb.) */}
           <div className="col-md-6">
             <div className="form-container">
               <h2 className="h2 mb-4">Input Data</h2>
 
+              {/* Testsúly */}
               <div className="form-row">
                 <label className="form-label">Weight (kg):</label>
                 <input
@@ -117,6 +135,7 @@ export default function Calorie() {
                 />
               </div>
 
+              {/* Testmagasság */}
               <div className="form-row">
                 <label className="form-label">Height (cm):</label>
                 <input
@@ -127,11 +146,18 @@ export default function Calorie() {
                 />
               </div>
 
+              {/* Életkor */}
               <div className="form-row">
                 <label className="form-label">Age:</label>
-                <input type="number" className="form-control-sm" value={age} onChange={(e) => setAge(e.target.value)} />
+                <input
+                  type="number"
+                  className="form-control-sm"
+                  value={age}
+                  onChange={(e) => setAge(e.target.value)}
+                />
               </div>
 
+              {/* Nem választó */}
               <div className="form-row">
                 <label className="form-label">Gender:</label>
                 <select className="form-select-sm" value={gender} onChange={(e) => setGender(e.target.value)}>
@@ -140,6 +166,7 @@ export default function Calorie() {
                 </select>
               </div>
 
+              {/* Aktivitási szint */}
               <div className="form-row">
                 <label className="form-label">Activity Level:</label>
                 <select
@@ -155,6 +182,7 @@ export default function Calorie() {
                 </select>
               </div>
 
+              {/* Heti fogyási cél (deficit) */}
               <div className="form-row">
                 <label className="form-label">Weekly Goal (kg):</label>
                 <select
@@ -168,6 +196,7 @@ export default function Calorie() {
                 </select>
               </div>
 
+              {/* Számítás gomb */}
               <div className="form-row">
                 <label className="form-label"></label>
                 <button type="button" className="btn btn-primary" onClick={calculateCalories}>
@@ -177,16 +206,18 @@ export default function Calorie() {
             </div>
           </div>
 
-          {/* Results Column */}
+          {/* Jobb oldalon az eredmények jelennek meg */}
           <div className="col-md-6 mt-4 mt-md-0">
             <div className="form-container">
               <h2 className="h2 mb-4">Results</h2>
 
+              {/* Eredmények listázása */}
               {Object.entries(calories).map(([key, value]) => (
                 <div className="form-row" key={key}>
                   <label className="form-label">{key.charAt(0).toUpperCase() + key.slice(1)}:</label>
                   <div className="result-value-container">
                     <input type="text" className="result-input" value={value} readOnly />
+                    {/* BMR nem választható, a többi igen */}
                     {key !== "bmr" && (
                       <input
                         type="checkbox"
@@ -199,6 +230,7 @@ export default function Calorie() {
                 </div>
               ))}
 
+              {/* Mentés gomb */}
               <div className="form-row">
                 <label className="form-label"></label>
                 <button className="btn btn-success" onClick={saveCalorie}>
@@ -206,6 +238,7 @@ export default function Calorie() {
                 </button>
               </div>
 
+              {/* Üzenet megjelenítése */}
               {message && (
                 <div className={`message ${message.includes("successfully") ? "text-success" : "text-danger"}`}>
                   {message}
@@ -218,4 +251,3 @@ export default function Calorie() {
     </div>
   )
 }
-
