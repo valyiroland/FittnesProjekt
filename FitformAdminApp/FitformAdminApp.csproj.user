@@ -7,24 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AdminWindow.xaml.cs">
+    <Compile Update="UserCRUD\UserDelete.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserCRUD\Users.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AdminWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="UserDelete.xaml">
+    <Page Update="UserCRUD\UserDelete.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="UserPost.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UserPut.xaml">
+    <Page Update="UserCRUD\Users.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

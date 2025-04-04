@@ -1,58 +1,24 @@
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.csproj.AssemblyReference.cache
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\MainWindow.g.cs
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\App.g.cs
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp_MarkupCompile.cache
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp_MarkupCompile.lref
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\bin\Debug\net8.0-windows\FitformAdminApp.exe
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\bin\Debug\net8.0-windows\FitformAdminApp.deps.json
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\bin\Debug\net8.0-windows\FitformAdminApp.runtimeconfig.json
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\bin\Debug\net8.0-windows\FitformAdminApp.dll
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\bin\Debug\net8.0-windows\FitformAdminApp.pdb
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.g.resources
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.AssemblyInfoInputs.cache
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.AssemblyInfo.cs
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.csproj.CoreCompileInputs.cache
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformA.A88E75CD.Up2Date
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.dll
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\refint\FitformAdminApp.dll
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.pdb
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.genruntimeconfig.cache
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\ref\FitformAdminApp.dll
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\AdminWindow.g.cs
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\UserPost.g.cs
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\AdminWindow.baml
-C:\Users\valyirg\source\repos\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\UserPost.baml
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.csproj.AssemblyReference.cache
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\AdminWindow.g.cs
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\MainWindow.g.cs
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\UserPost.g.cs
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\UserPut.g.cs
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\App.g.cs
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp_MarkupCompile.cache
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp_MarkupCompile.lref
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.dll
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\refint\FitformAdminApp.dll
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.pdb
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\UserDelete.g.cs
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\bin\Debug\net8.0-windows\FitformAdminApp.exe
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\bin\Debug\net8.0-windows\FitformAdminApp.deps.json
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\bin\Debug\net8.0-windows\FitformAdminApp.runtimeconfig.json
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\bin\Debug\net8.0-windows\FitformAdminApp.dll
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\bin\Debug\net8.0-windows\FitformAdminApp.pdb
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\AdminWindow.baml
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\UserDelete.baml
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\UserPost.baml
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\UserPut.baml
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.g.resources
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.AssemblyInfoInputs.cache
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.AssemblyInfo.cs
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.csproj.CoreCompileInputs.cache
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformA.A88E75CD.Up2Date
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\FitformAdminApp.genruntimeconfig.cache
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\ref\FitformAdminApp.dll
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\FitFormAdminApp_MarkupCompile.cache
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\FitFormAdminApp_MarkupCompile.lref
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\bin\Debug\net8.0-windows\FitFormAdminApp.exe
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\bin\Debug\net8.0-windows\FitFormAdminApp.deps.json
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\bin\Debug\net8.0-windows\FitFormAdminApp.runtimeconfig.json
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\bin\Debug\net8.0-windows\FitFormAdminApp.dll
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\bin\Debug\net8.0-windows\FitFormAdminApp.pdb
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\FitFormAdminApp.g.resources
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\FitFormAdminApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\FitFormAdminApp.AssemblyInfoInputs.cache
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\FitFormAdminApp.AssemblyInfo.cs
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\FitFormAdminApp.csproj.CoreCompileInputs.cache
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\FitFormAdminApp.dll
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\refint\FitFormAdminApp.dll
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\FitFormAdminApp.pdb
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\FitFormAdminApp.genruntimeconfig.cache
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\ref\FitFormAdminApp.dll
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\UserCRUD\Users.g.cs
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\UserCRUD\Users.baml
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\UserCRUD\UserDelete.g.cs
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\UserCRUD\UserDelete.baml

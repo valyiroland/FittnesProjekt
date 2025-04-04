@@ -1,20 +1,20 @@
-﻿FitformAdminApp
+﻿FitFormAdminApp
 1.0.0.0
 
 winexe
 C#
 .cs
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\obj\Debug\net8.0-windows\
-FitformAdminApp
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\obj\Debug\net8.0-windows\
+FitFormAdminApp
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\vroli\OneDrive\Asztali gép\FitformAdminApp\FitformAdminApp\App.xaml
-5188167599
+C:\Users\valyirg\source\repos\FitFormAdminApp\FitFormAdminApp\App.xaml
+3-1471187920
 
-101461338493
-199-742912093
-AdminWindow.xaml;MainWindow.xaml;UserDelete.xaml;UserPost.xaml;UserPut.xaml;
+111040446472
+198-1431420039
+MainWindow.xaml;UserCRUD\UserDelete.xaml;UserCRUD\Users.xaml;
 
 False
 

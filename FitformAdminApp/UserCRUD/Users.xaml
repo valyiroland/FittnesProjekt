@@ -1,0 +1,25 @@
+﻿<Window x:Class="FitFormAdminApp.Users"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitFormAdminApp"
+        mc:Ignorable="d"
+        Title="Users" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dtgFelhasznalok" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="FelhasznaloNev"
+                Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Email cím"
+                Binding="{Binding Email}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Jogosultsag"
+                Binding="{Binding Jogosultsag}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Gender"
+                Binding="{Binding Gender}"></DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </Grid>
+</Window>

@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace FitformAdminApp
+namespace FitFormAdminApp
 {
     /// <summary>
     /// Interaction logic for App.xaml

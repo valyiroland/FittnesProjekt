@@ -1,112 +1,110 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using FitFormAdminApp.UserCRUD;
+using FitprojectAPI.DTOs;
 using System.Net.Http;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
 using System.Windows;
 
-namespace FitformAdminApp
+namespace FitFormAdminApp
 {
     public partial class MainWindow : Window
     {
-        private readonly HttpClient _httpClient = new() { BaseAddress = new Uri("http://localhost:5071/") };
-        private string _token;
-        private string _username;
-        private string _email;
+        public static string uId = "";
+
+        public static HttpClient sharedClient = new HttpClient()
+        {
+            BaseAddress = new Uri("http://localhost:5071")
+        };
+
+        public static string CreateSHA256(string input)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] data = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
+                var sBuilder = new StringBuilder();
+                for (int i = 0; i < data.Length; i++)
+                {
+                    sBuilder.Append(data[i].ToString("x2"));
+                }
+                return sBuilder.ToString();
+            }
+        }
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private async void LoginButton_Click(object sender, RoutedEventArgs e)
+        private void MenuUserList_Click(object sender, RoutedEventArgs e)
         {
-            string username = UsernameTextBox.Text.Trim();
-            string password = PasswordBox.Password.Trim();
+            Users userWindow = new Users();
+            userWindow.ShowDialog();
+        }
 
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+        private async void btnBejelentkezes_Click(object sender, RoutedEventArgs e)
+        {
+            var response = await sharedClient.PostAsync($"api/Login/GetSalt/{tbLoginName.Text}",
+                new StringContent(tbLoginName.Text, Encoding.UTF8, "text/plain"));
+            string salt = await response.Content.ReadAsStringAsync();
+
+            LoginDTO dto = new LoginDTO()
             {
-                MessageBox.Show("Felhasználónév és jelszó megadása kötelező!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
+                LoginName = tbLoginName.Text,
+                TmpHash = CreateSHA256(pbPassword.Password + salt)
+            };
+            string json = JsonSerializer.Serialize(dto, JsonSerializerOptions.Default);
+            var body = new StringContent(json, Encoding.UTF8, "application/json");
 
-            try
+            var valasz = await sharedClient.PostAsync("api/Login/", body);
+            string userstring = await valasz.Content.ReadAsStringAsync();
+            MessageBox.Show(userstring);
+
+            if (valasz.IsSuccessStatusCode)
             {
-                HttpResponseMessage saltResponse = await _httpClient.PostAsync($"api/Login/GetSalt/{username}", null);
-                if (!saltResponse.IsSuccessStatusCode)
+                JsonSerializerOptions jsonOptions = new JsonSerializerOptions()
                 {
-                    MessageBox.Show("Sikertelen bejelentkezés, ellenőrizze adatait!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-
-                string salt = await saltResponse.Content.ReadAsStringAsync();
-                string hashedPassword = ComputeSha256Hash(password + salt);
-
-                var loginDTO = new
-                {
-                    LoginName = username,
-                    TmpHash = hashedPassword
+                    PropertyNameCaseInsensitive = true
                 };
-
-                string jsonContent = JsonConvert.SerializeObject(loginDTO);
-                var httpContent = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-
-                HttpResponseMessage loginResponse = await _httpClient.PostAsync("api/Login", httpContent);
-
-                if (!loginResponse.IsSuccessStatusCode)
-                {
-                    MessageBox.Show("Sikertelen bejelentkezés, ellenőrizze adatait!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-
-                string responseBody = await loginResponse.Content.ReadAsStringAsync();
-                var loginData = JsonConvert.DeserializeObject<LoginResponse>(responseBody);
-
-                if (loginData != null)
-                {
-                    _token = loginData.Token;
-                    _username = loginData.Nev;
-                    _email = loginData.Email;
-
-                    MessageBox.Show($"Sikeres bejelentkezés! Üdv, {_username}!", "Siker", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                    // Új ablak megnyitása és a jelenlegi bezárása
-                    AdminWindow adminWindow = new AdminWindow(_token, _username, _email);
-                    adminWindow.Show();
-                    this.Close();
-                }
+                LoggedInUser logged = JsonSerializer.Deserialize<LoggedInUser>(userstring, jsonOptions);
+                uId = logged.Token;
             }
-            catch (Exception ex)
+
+            if (uId != "")
             {
-                MessageBox.Show($"Hiba történt: {ex.Message}", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
+                btnBejelentkezes.IsEnabled = false;
+                btnKijelentkezes.IsEnabled = true;
+                menuFelhasznalok.IsEnabled = true;
             }
-        }
-
-        private static string ComputeSha256Hash(string rawData)
-        {
-            using (SHA256 sha256 = SHA256.Create())
+            else
             {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(rawData));
-                StringBuilder builder = new StringBuilder();
-                foreach (byte b in bytes)
-                {
-                    builder.Append(b.ToString("x2"));
-                }
-                return builder.ToString();
+                MessageBox.Show($"Sikertelen bejelentkezés!");
             }
         }
 
-        public class LoginResponse
+        private async void btnKijelentkezes_Click(object sender, RoutedEventArgs e)
         {
-            public string Token { get; set; }
-            public string Nev { get; set; }
-            public string Email { get; set; }
+            var response = await sharedClient.PostAsync($"api/Logout/{uId}",
+                new StringContent(uId, Encoding.UTF8, "text/plain"));
+            string valasz = await response.Content.ReadAsStringAsync();
+
+            if (uId != "")
+            {
+                btnBejelentkezes.IsEnabled = true;
+                btnKijelentkezes.IsEnabled = false;
+                menuFelhasznalok.IsEnabled = false;
+            }
+            else
+            {
+                MessageBox.Show($"Sikertelen kijelentkezés\n{valasz}");
+            }
         }
 
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            UserDelete userWindow = new UserDelete();
+            userWindow.ShowDialog();
+
         }
     }
 }
