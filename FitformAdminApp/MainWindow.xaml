@@ -15,7 +15,9 @@
             <MenuItem Header="Felhasználók" Click="MenuUserList_Click"></MenuItem>
             <MenuItem Header="Törlés" Click="MenuItem_Click"></MenuItem>
             <MenuItem Header="Szerkesztés"></MenuItem>
-            
+            <MenuItem Header="Hozzávalók" x:Name="miHozzavalok" Click="miHozzavalok_Click"></MenuItem>
+            <MenuItem x:Name="miUjhozzavalo" Header="Új Hozzávaló" Click="miUjhozzavalo_Click"></MenuItem>
+
         </Menu>
         <StackPanel HorizontalAlignment="Center" Grid.Row="1">
             <Label Content="Felhasználónév" Margin="0 10"></Label>

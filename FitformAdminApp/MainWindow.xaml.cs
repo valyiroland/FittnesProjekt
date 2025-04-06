@@ -1,4 +1,5 @@
-﻿using FitFormAdminApp.UserCRUD;
+﻿using FitformAdminApp.IngredientCRUD;
+using FitFormAdminApp.UserCRUD;
 using FitprojectAPI.DTOs;
 using System.Net.Http;
 using System.Security.Cryptography;
@@ -105,6 +106,19 @@ namespace FitFormAdminApp
             UserDelete userWindow = new UserDelete();
             userWindow.ShowDialog();
 
+        }
+
+        private void miUjhozzavalo_Click(object sender, RoutedEventArgs e)
+        {
+            IngredientAdd IngredientWindow = new IngredientAdd();
+            IngredientWindow.ShowDialog();
+
+        }
+
+        private void miHozzavalok_Click(object sender, RoutedEventArgs e)
+        {
+            Ingredient IngredientWindow = new Ingredient();
+            IngredientWindow.ShowDialog();
         }
     }
 }

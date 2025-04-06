@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\valyirg\\source\\repos\\FitFormAdminApp\\FitFormAdminApp\\FitFormAdminApp.csproj": {}
+    "C:\\Users\\vroli\\OneDrive\\Asztali gép\\adminpush\\FittnesProjekt\\FitformAdminApp\\FitformAdminApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\valyirg\\source\\repos\\FitFormAdminApp\\FitFormAdminApp\\FitFormAdminApp.csproj": {
+    "C:\\Users\\vroli\\OneDrive\\Asztali gép\\adminpush\\FittnesProjekt\\FitformAdminApp\\FitformAdminApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\valyirg\\source\\repos\\FitFormAdminApp\\FitFormAdminApp\\FitFormAdminApp.csproj",
-        "projectName": "FitFormAdminApp",
-        "projectPath": "C:\\Users\\valyirg\\source\\repos\\FitFormAdminApp\\FitFormAdminApp\\FitFormAdminApp.csproj",
-        "packagesPath": "C:\\Users\\valyirg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\valyirg\\source\\repos\\FitFormAdminApp\\FitFormAdminApp\\obj\\",
+        "projectUniqueName": "C:\\Users\\vroli\\OneDrive\\Asztali gép\\adminpush\\FittnesProjekt\\FitformAdminApp\\FitformAdminApp.csproj",
+        "projectName": "FitformAdminApp",
+        "projectPath": "C:\\Users\\vroli\\OneDrive\\Asztali gép\\adminpush\\FittnesProjekt\\FitformAdminApp\\FitformAdminApp.csproj",
+        "packagesPath": "C:\\Users\\vroli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vroli\\OneDrive\\Asztali gép\\adminpush\\FittnesProjekt\\FitformAdminApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\valyirg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vroli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
