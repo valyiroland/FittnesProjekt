@@ -41,12 +41,12 @@ namespace FitprojectAPI
         {
             MailMessage mail = new MailMessage();
             SmtpClient smtpClient = new SmtpClient("smtp.gmail.com");
-            mail.From = new MailAddress("coder.media1@gmail.com");
+            mail.From = new MailAddress("fitproject446@gmail.com");
             mail.To.Add(mailAddressTo);
             mail.Subject = subject;
             mail.Body = body;
             smtpClient.Port = 587;
-            smtpClient.Credentials = new System.Net.NetworkCredential("coder.media1@gmail.com", "qmfonxwxejrysfnb");
+            smtpClient.Credentials = new System.Net.NetworkCredential("fitproject446@gmail.com", "ipjdlqhyqyocoteh");
             smtpClient.EnableSsl = true;
             await smtpClient.SendMailAsync(mail);
         }
@@ -55,12 +55,12 @@ namespace FitprojectAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
-          
+
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-         
+
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowReactApp",
@@ -82,7 +82,7 @@ namespace FitprojectAPI
 
             app.UseHttpsRedirection();
 
-            app.UseCors("AllowReactApp"); 
+            app.UseCors("AllowReactApp");
 
             app.UseAuthorization();
 
