@@ -1,80 +1,62 @@
-import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faInfoCircle, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import './Navbar.css';
+import { useEffect, useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faUser, faInfoCircle, faSignOutAlt } from "@fortawesome/free-solid-svg-icons"
+import { Link, useNavigate } from "react-router-dom"
+import axios from "axios"
+import "./Navbar.css"
 
 export default function Navbar() {
-  const [username, setUsername] = useState(null);
-  const [token, setToken] = useState(null);
-  const navigate = useNavigate();
+  // Az aktuális felhasználó nevét és a token-t tároló állapotok
+  const [username, setUsername] = useState(null)
+  const [token, setToken] = useState(null)
+  
+  // A navigációs hook, hogy a logout után átirányítsuk a bejelentkezési oldalra
+  const navigate = useNavigate()
 
-  // 🔹 Ellenőrizzük, hogy be van-e jelentkezve a felhasználó
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
+    // A localStorage-ból próbáljuk lekérni a felhasználó adatokat (név és token)
+    const storedUser = localStorage.getItem("user")
     if (storedUser) {
-      const user = JSON.parse(storedUser);
-      setUsername(user.name);
-      setToken(user.token)
+      const user = JSON.parse(storedUser)
+      setUsername(user.name) // Felhasználó neve
+      setToken(user.token)    // Felhasználói token
     }
-  }, []);
+  }, []) // Csak egyszer fut le, amikor a komponens betöltődik
 
-  // 🔹 Kijelentkezési függvény (Token küldése query paraméterként)
+  // Kilépési függvény
   const handleLogout = async () => {
     try {
-      const storedUser = localStorage.getItem("token");
-      console.log(token)
-      if (!token) return;
+      // Ha nincs token, nem szükséges kilépni
+      if (!token) return
 
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/LogOut?uId=${token}`);
+      // Kilépés a backend API-val
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/LogOut?uId=${token}`)
+      
+      // Töröljük a localStorage-ban tárolt adatokat
+      localStorage.removeItem("user")
+      localStorage.removeItem("token")
 
-      localStorage.removeItem("user"); // 🔹 Felhasználói adatok törlése
-      localStorage.removeItem("token"); // 🔹 Token törlése
-      setUsername(null);
-      navigate("/Login"); // 🔹 Átirányítás a bejelentkezéshez
+      // Reseteljük a felhasználói adatokat
+      setUsername(null)
+      
+      // Navigálás a bejelentkezési oldalra
+      navigate("/Login")
     } catch (error) {
-      console.error("Logout failed:", error.response ? error.response.data : error.message);
+      console.error("Logout failed:", error.response ? error.response.data : error.message)
     }
-  };
+  }
 
   return (
-    
-    <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav className="navbar navbar-light fixed-top">
       <div className="container">
-        <Link className="navbar-brand" to="/">
-          <img id="navbarlogo" src="/navbarlogo.png" alt="Logo" />
-        </Link>
+        {/* Mobil és tablet nézet (1000px alatt) */}
+        <div className="mobile-tablet-view">
+          <Link className="navbar-brand" to="/">
+            <img id="navbarlogo" src="/navbarlogo.png" alt="Logo" />
+          </Link>
 
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-                <Link className="nav-link text-dark" to="/">Home</Link>
-            </li>
-            <li className="nav-item">
-                <Link className="nav-link text-dark" to="/BMI">BMI</Link>
-            </li>
-            <li className="nav-item">
-                <Link className="nav-link text-dark" to="/Calorie">Calorie</Link>
-            </li>
-            <li className="nav-item">
-              {username ? (
-                <Link className="nav-link text-dark" to="/Diet">Diet</Link>
-              ) : (
-                <span className="nav-link text-muted" style={{ 
-                  cursor: 'not-allowed', 
-                  opacity: 0.5 
-                }}>
-                  Diet
-                </span>
-              )}
-            </li>
-          </ul>
-          <div className="user-icons">
+          <div className="nav-icons">
+            {/* Ha van bejelentkezett felhasználó */}
             {username ? (
               <>
                 <span className="nav-username">Hello, {username}!</span>
@@ -83,17 +65,57 @@ export default function Navbar() {
                 </button>
               </>
             ) : (
-              <Link to="/Login">
+              // Ha nincs bejelentkezett felhasználó, akkor link a bejelentkezéshez
+              <Link to="/Login" className="nav-icon-link" aria-label="Bejelentkezés">
                 <FontAwesomeIcon icon={faUser} />
               </Link>
             )}
-            <Link to="/Profile">
+            <Link to="/Profile" className="nav-icon-link" aria-label="Információ">
+              <FontAwesomeIcon icon={faInfoCircle} />
+            </Link>
+          </div>
+        </div>
+
+        {/* Desktop nézet (1000px felett) */}
+        <div className="desktop-view">
+          <Link className="navbar-brand" to="/">
+            <img id="navbarlogo" src="/navbarlogo.png" alt="Logo" />
+          </Link>
+
+          <div className="desktop-nav">
+            {/* Navigációs linkek a desktop verzióhoz */}
+            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/BMI">BMI</Link>
+            <Link className="nav-link" to="/Calorie">Calorie</Link>
+            {/* Ha van bejelentkezett felhasználó, akkor megjelenik a Diet link */}
+            {username ? (
+              <Link className="nav-link" to="/Diet">Diet</Link>
+            ) : (
+              <span className="nav-link disabled">Diet</span> // Ha nincs bejelentkezve, letiltott a link
+            )}
+          </div>
+
+          <div className="user-section">
+            {/* Ha van bejelentkezett felhasználó */}
+            {username ? (
+              <>
+                <span className="nav-username">Hello, {username}!</span>
+                <button className="logout-button" onClick={handleLogout}>
+                  <FontAwesomeIcon icon={faSignOutAlt} /> Logout
+                </button>
+              </>
+            ) : (
+              // Ha nincs bejelentkezve, akkor login link
+              <Link to="/Login" className="login-link">
+                <FontAwesomeIcon icon={faUser} /> Login
+              </Link>
+            )}
+            <Link to="/Profile" className="info-link">
               <FontAwesomeIcon icon={faInfoCircle} />
             </Link>
           </div>
         </div>
       </div>
     </nav>
-   
-  );
+  )
 }

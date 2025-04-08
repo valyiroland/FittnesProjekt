@@ -60,7 +60,7 @@ export default function Home() {
                   </div>
                   <h5 className="card-title fw-bold">Calorie Goal Calculator</h5>
                   <p className="card-text text-muted">
-                    Számítsd ki a napi ajánlott kalóriabeviteled a fitnesz céljaid alapján.
+                  Calculate your daily recommended calorie intake based on your fitness goals.
                   </p>
                 </Link>
               </div>
@@ -80,7 +80,7 @@ export default function Home() {
                   </div>
                   <h5 className="card-title fw-bold">BMI Calculator</h5>
                   <p className="card-text text-muted">
-                    Számítsd ki és kövesd nyomon a testtömegindexed az egészséges életmód érdekében.
+                  Calculate and track your Body Mass Index (BMI) for a healthier lifestyle.
                   </p>
                 </Link>
               </div>
@@ -100,7 +100,7 @@ export default function Home() {
                   </div>
                   <h5 className="card-title fw-bold">Diet Plans</h5>
                   <p className="card-text text-muted">
-                    Válogass különböző diétás tervek közül, hogy támogasd a fitnesz céljaidat.
+                  Choose from a variety of healthy foods and ingredients to support your fitness goals.
                   </p>
                 </Link>
               </div>
