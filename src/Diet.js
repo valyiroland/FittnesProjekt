@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './Diet.css';
+import { useState, useEffect } from "react"
+import axios from "axios"
+import "./Diet.css"
 
 export default function Diet() {
   // Kiválasztott kategória állapota (alapértelmezetten "Vegetables")
-  const [selectedCategory, setSelectedCategory] = useState("Vegetables");
+  const [selectedCategory, setSelectedCategory] = useState("Vegetables")
 
   // Hozzávalók listájának állapota
-  const [foods, setFoods] = useState([]);
+  const [foods, setFoods] = useState([])
 
   // Receptek listájának állapota
-  const [recipes, setRecipes] = useState([]);
+  const [recipes, setRecipes] = useState([])
+
+  // Adagok száma receptenként
+  const [servings, setServings] = useState({})
+
+  // Maximum adagok száma
+  const MAX_SERVINGS = 10
 
   // Ez a hook akkor fut le, amikor a `selectedCategory` értéke megváltozik
   useEffect(() => {
@@ -19,31 +25,56 @@ export default function Diet() {
       try {
         // Kategórianévhez tartozó azonosítók
         const categoryIdMap = {
-          "Vegetables": 1,
-          "Fruits": 2,
+          Vegetables: 1,
+          Fruits: 2,
           "Meats and fishes": 3,
           "Pasta and Breads": 4,
           "Nuts and Legumes": 5,
-          "Dairy": 6,
-          "Others": 7,
-        };
+          Dairy: 6,
+          Others: 7,
+        }
 
         // Hozzávalók lekérése az API-ból a kiválasztott kategória alapján
-        const foodResponse = await axios.get(`${process.env.REACT_APP_API_URL}/Ingredients/category/${categoryIdMap[selectedCategory]}`);
-        setFoods(foodResponse.data); // Lekért hozzávalók állapotba mentése
+        const foodResponse = await axios.get(
+          `${process.env.REACT_APP_API_URL}/Ingredients/category/${categoryIdMap[selectedCategory]}`,
+        )
+        setFoods(foodResponse.data) // Lekért hozzávalók állapotba mentése
 
         // Receptek lekérése az API-ból
-        const recipeResponse = await axios.get(`${process.env.REACT_APP_API_URL}/Recipes/Recipes`);
-        setRecipes(recipeResponse.data); // Lekért receptek állapotba mentése
+        const recipeResponse = await axios.get(`${process.env.REACT_APP_API_URL}/Recipes/Recipes`)
 
+        // Inicializáljuk az adagok számát minden recepthez
+        const initialServings = {}
+        recipeResponse.data.forEach((recipe) => {
+          initialServings[recipe.id] = 1 // Alapértelmezetten 1 adag
+        })
+
+        setServings(initialServings)
+        setRecipes(recipeResponse.data) // Lekért receptek állapotba mentése
       } catch (error) {
-        console.error("Hiba történt az adatok lekérésekor", error);
+        console.error("Hiba történt az adatok lekérésekor", error)
       }
-    };
+    }
 
     // Adatlekérő függvény meghívása
-    fetchData();
-  }, [selectedCategory]); // Hook újrafut, ha megváltozik a kiválasztott kategória
+    fetchData()
+  }, [selectedCategory]) // Hook újrafut, ha megváltozik a kiválasztott kategória
+
+  // Adagok számának növelése (maximum MAX_SERVINGS)
+  const increaseServings = (recipeId) => {
+    setServings((prev) => ({
+      ...prev,
+      [recipeId]: Math.min(MAX_SERVINGS, (prev[recipeId] || 1) + 1),
+    }))
+  }
+
+  // Adagok számának csökkentése (minimum 1)
+  const decreaseServings = (recipeId) => {
+    setServings((prev) => ({
+      ...prev,
+      [recipeId]: Math.max(1, (prev[recipeId] || 1) - 1),
+    }))
+  }
 
   return (
     <div className="container mt-5 pt-5 pb-5">
@@ -57,11 +88,13 @@ export default function Diet() {
           className="form-select border-dark w-auto text-center"
         >
           {/* Elérhető kategóriák megjelenítése */}
-          {["Vegetables", "Fruits", "Meats and fishes", "Pasta and Breads", "Nuts and Legumes", "Dairy", "Others"].map((category) => (
+          {["Vegetables", "Fruits", "Meats and fishes", "Pasta and Breads", "Nuts and Legumes", "Dairy", "Others"].map(
+            (category) => (
               <option key={category} value={category}>
                 {category}
               </option>
-          ))}
+            ),
+          )}
         </select>
       </div>
 
@@ -94,12 +127,44 @@ export default function Diet() {
                 <div className="card-body">
                   <h5 className="card-title">{recipe.name}</h5>
                   <p className="card-text">{recipe.description}</p>
+
+                  {/* Adagok számának beállítása */}
+                  <div className="servings-control mb-3">
+                    <p className="font-weight-bold mb-2 text-center">Servings:</p>
+                    <div className="d-flex align-items-center justify-content-center">
+                      <button
+                        className="btn btn-outline-dark btn-sm"
+                        onClick={() => decreaseServings(recipe.id)}
+                        disabled={servings[recipe.id] <= 1}
+                        aria-label="Decrease servings"
+                      >
+                        -
+                      </button>
+                      <span className="mx-3">{servings[recipe.id] || 1}</span>
+                      <button
+                        className="btn btn-outline-dark btn-sm"
+                        onClick={() => increaseServings(recipe.id)}
+                        disabled={servings[recipe.id] >= MAX_SERVINGS}
+                        aria-label="Increase servings"
+                      >
+                        +
+                      </button>
+                    </div>
+                    {servings[recipe.id] >= MAX_SERVINGS && (
+                      <small className="text-muted d-block mt-1 text-center">Maximum {MAX_SERVINGS} servings</small>
+                    )}
+                  </div>
+
                   <div>
                     <p className="font-weight-bold mb-2">Ingredients:</p>
                     <ul className="list-unstyled">
                       {/* Hozzávalók listázása vagy hibaüzenet ha nincs */}
-                      {recipe.ingredients && Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0 ? (
-                        recipe.ingredients.map((ingredient, idx) => <li key={ingredient + idx}>{ingredient}</li>)
+                      {recipe.ingredientDetails && recipe.ingredientDetails.length > 0 ? (
+                        recipe.ingredientDetails.map((ingredient, idx) => (
+                          <li key={ingredient.name + idx} className="mb-1">
+                            {ingredient.name}: {(ingredient.amount * (servings[recipe.id] || 1)).toFixed(0)} g
+                          </li>
+                        ))
                       ) : (
                         <li>No ingredients available</li>
                       )}
@@ -111,5 +176,5 @@ export default function Diet() {
           ))}
       </div>
     </div>
-  );
+  )
 }
