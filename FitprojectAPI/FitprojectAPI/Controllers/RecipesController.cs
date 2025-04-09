@@ -10,7 +10,6 @@ namespace FitprojectAPI.Controllers
     public class RecipesController : ControllerBase
     {
         [HttpGet("Recipes")]
-
         public IActionResult GetR()
         {
             using (var context = new FitprojectContext())
@@ -18,14 +17,20 @@ namespace FitprojectAPI.Controllers
                 try
                 {
                     var recipes = context.FitprojectRecipes
-                        .Include(r => r.FitprojectRecipeIngredients) 
-                        .ThenInclude(ri => ri.Ingredient) 
+                        .Include(r => r.FitprojectRecipeIngredients)
+                        .ThenInclude(ri => ri.Ingredient)
                         .Select(r => new
                         {
                             r.Id,
                             r.Name,
                             r.Description,
-                            Ingredients = r.FitprojectRecipeIngredients.Select(ri => ri.Ingredient.Name).ToList()
+                            Ingredients = r.FitprojectRecipeIngredients.Select(ri => ri.Ingredient.Name).ToList(),
+                            IngredientDetails = r.FitprojectRecipeIngredients.Select(ri => new
+                            {
+                                ri.Ingredient.Id,
+                                ri.Ingredient.Name,
+                                Amount = ri.Amount
+                            }).ToList()
                         })
                         .ToList();
 
